@@ -15,7 +15,7 @@ function Hero() {
           TRUSTED CHARITY COMPANY
         </p>
         <h1 className='font-bold text-2xl sm:text-2xl md:text-4xl lg:text-5xl leading-snug mb-2'>
-          <span className='text-black'>Let's Help And Make</span>
+          <span className='text-black'>Let&apos;s Help And Make</span>
           <br />
           <span className='text-black'>
             People Smile By <span className='text-green-600'>Giving</span>
