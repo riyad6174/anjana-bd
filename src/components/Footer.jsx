@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 function Footer() {
@@ -153,33 +154,42 @@ function Footer() {
 
                 <ul class='mt-6 space-y-4 text-sm'>
                   <li>
-                    <a
-                      href='#'
+                    <Link
+                      href='/bank-details'
                       class='text-gray-700 transition hover:opacity-75'
                     >
                       {' '}
-                      Contact{' '}
-                    </a>
+                      Bank Details{' '}
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      href='#'
+                    <Link
+                      href='/faq'
                       class='text-gray-700 transition hover:opacity-75'
                     >
                       {' '}
                       FAQs{' '}
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
-                      href='#'
+                    <Link
+                      href='/audit-report'
                       class='text-gray-700 transition hover:opacity-75'
                     >
                       {' '}
-                      Live Chat{' '}
-                    </a>
+                      Audit Reports{' '}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/gallery'
+                      class='text-gray-700 transition hover:opacity-75'
+                    >
+                      {' '}
+                      Gallery{' '}
+                    </Link>
                   </li>
                 </ul>
               </div>

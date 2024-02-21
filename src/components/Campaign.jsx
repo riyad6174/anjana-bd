@@ -3,6 +3,7 @@ import fundraising from '../../public/assets/fundraising.png';
 import food from '../../public/assets/foodandwater.png';
 import invasion from '../../public/assets/massiveInvasion.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Campaign() {
   return (
@@ -35,9 +36,12 @@ function Campaign() {
                 <div className=' relative bg-green-600 h-2 rounded-lg w-28 mt-0'></div>
               </div> */}
               <div className='flex flex-row align-middle justify-between mb-[-20px] pb-[-10px]'>
-                <button className='bg-green-600 rounded-md py-3 my-5 w-24 text-white text-xs mb-2'>
+                <Link
+                  href='/project-donate'
+                  className='bg-green-600 text-center rounded-md py-3 my-5 w-24 text-white text-xs mb-2'
+                >
                   Donate Now
-                </button>
+                </Link>
                 <p className='text-green-600 self-center'>See Details</p>
               </div>
             </div>
@@ -62,9 +66,12 @@ function Campaign() {
                 <div className=' relative bg-green-600 h-2 rounded-lg w-6 mt-0'></div>
               </div> */}
               <div className='flex flex-row align-middle justify-between mb-[-20px]'>
-                <button className='bg-green-600 rounded-md py-3 my-5 w-24 text-white text-xs mb-2'>
+                <Link
+                  href='/project-donate'
+                  className='bg-green-600 text-center rounded-md py-3 my-5 w-24 text-white text-xs mb-2'
+                >
                   Donate Now
-                </button>
+                </Link>
                 <p className='text-green-600 self-center'>See Details</p>
               </div>
             </div>
@@ -89,9 +96,12 @@ function Campaign() {
                 <div className=' relative bg-green-600 h-2 rounded-lg w-28 mt-0'></div>
               </div> */}
               <div className='flex flex-row align-middle justify-between mb-[-20px]'>
-                <button className='bg-green-600 rounded-md py-3 my-5 w-24 text-white text-xs mb-2'>
+                <Link
+                  href='/project-donate'
+                  className='bg-green-600 text-center rounded-md py-3 my-5 w-24 text-white text-xs mb-2'
+                >
                   Donate Now
-                </button>
+                </Link>
                 <p className='text-green-600 self-center'>See Details</p>
               </div>
             </div>

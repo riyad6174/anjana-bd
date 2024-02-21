@@ -52,7 +52,7 @@ function SponsorCard() {
           <div className='flex justify-between'>
             <span>
               <Link
-                href='/donate'
+                href='/sponsor-donate'
                 className='text-center z-20 bg-green-300 rounded-sm  text-green-800 text-xs font-mono px-4 py-2 leading-none  items-center'
               >
                 Read More
@@ -60,7 +60,7 @@ function SponsorCard() {
             </span>
             <span>
               <Link
-                href='/donate'
+                href='/sponsor-donate'
                 className='text-center z-20 bg-orange-300 rounded-sm text-orange-500 text-xs font-mono px-4 py-2 leading-none  items-center'
               >
                 Sponsor

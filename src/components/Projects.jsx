@@ -12,9 +12,12 @@ function Projects() {
           <h2 className='text-black text-xl lg:text-md font-semibold mb-8'>
             Explore Projects
           </h2>
-          <button className=' text-xs lg:text-xs font-semibold mb-8 bg-green-600 hover:opacity-80 px-2 uppercase text-white'>
+          <Link
+            href='/projects'
+            className='text-center text-xs lg:text-xs font-semibold mb-8 bg-green-600 hover:opacity-80 px-2 uppercase text-white'
+          >
             All Projects
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -66,7 +69,7 @@ function Projects() {
               </span>
               <span>
                 <Link
-                  href='/donate'
+                  href='/project-donate'
                   className='text-center z-20 bg-white rounded-full text-orange-500 text-xs font-bold px-4 py-2 leading-none  items-center'
                 >
                   Donate
@@ -122,7 +125,7 @@ function Projects() {
               </span>
               <span>
                 <Link
-                  href='/donate'
+                  href='/project-donate'
                   className='text-center z-20 bg-white rounded-full text-orange-500 text-xs font-bold px-4 py-2 leading-none  items-center'
                 >
                   Donate
@@ -178,7 +181,7 @@ function Projects() {
               </span>
               <span>
                 <Link
-                  href='/donate'
+                  href='/project-donate'
                   className='text-center z-20 bg-white rounded-full text-orange-500 text-xs font-bold px-4 py-2 leading-none  items-center'
                 >
                   Donate

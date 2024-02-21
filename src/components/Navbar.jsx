@@ -36,18 +36,23 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <a href='#' className='text-green-600'>
+            <Link href='/campaign' className='text-green-600'>
               Our Campaign
-            </a>
+            </Link>
           </li>
-          <li>
-            <a href='#' className='text-green-600'>
-              News
-            </a>
-          </li>
+          {/* <li>
+            <Link href='/about-us' className='text-green-600'>
+              About Us
+            </Link>
+          </li> */}
           <li>
             <Link href='/login' className='text-green-600'>
               Sign In
+            </Link>
+          </li>
+          <li>
+            <Link href='/dashboard' className='text-green-600'>
+              Dashboard
             </Link>
           </li>
           <li>
