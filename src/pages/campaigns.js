@@ -1,17 +1,18 @@
+import CampaignCard from '@/components/pageComponents/CampaignCard';
 import ProjectCard from '@/components/pageComponents/ProjectCard';
 import React from 'react';
 
-function Page({ projects }) {
-  console.log(projects);
+function Page({ campaign }) {
+  console.log(campaign);
   return (
     <div>
       <div>
         <span className='flex justify-center uppercase text-xl text-green-600 font-semibold'>
-          Our Projects
+          Our campaigns
         </span>
-        <div className='container grid grid-cols-2 gap-6 mt-10 px-10'>
-          {projects?.map((project) => {
-            return <ProjectCard key={project._id} project={project} />;
+        <div className='container grid grid-cols-2 gap-6'>
+          {campaign?.map((campaign) => {
+            return <CampaignCard key={campaign._id} project={campaign} />;
           })}
           {/* <ProjectCard />
           <ProjectCard />
@@ -27,23 +28,23 @@ export default Page;
 
 export async function getServerSideProps() {
   try {
-    const res = await fetch('http://localhost:5000/api/frontend/projects');
+    const res = await fetch('http://localhost:5000/api/frontend/campaigns');
     if (!res.ok) {
       throw new Error(`Failed to fetch data. Status: ${res.status}`);
     }
 
-    const projects = await res.json();
+    const campaign = await res.json();
 
     return {
       props: {
-        projects,
+        campaign,
       },
     };
   } catch (error) {
     console.error('Error fetching data:', error.message);
     return {
       props: {
-        projects: [],
+        campaign: [],
       },
     };
   }

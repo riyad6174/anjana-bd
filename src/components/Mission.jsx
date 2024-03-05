@@ -5,12 +5,14 @@ import { FaFirstAid } from 'react-icons/fa';
 
 function Mission() {
   return (
-    <div className=''>
-      <span className='text-2xl font-semibold uppercase  flex justify-center'>
-        <p className='border-b-4 text-green-600 uppercase'>Our Mission</p>
+    <div className='container py-1 md:py-6'>
+      <span className='text-xl md:text-xl font-semibold uppercase  flex justify-center'>
+        <p className='border-b-2 border-green-600 text-green-600 uppercase'>
+          Our Mission
+        </p>
       </span>
-      <section class=' antialiased  text-gray-600  p-4 pt-20'>
-        <div class='flex'>
+      <section class=' antialiased  text-gray-600  p-4 pt-10 md:pt-20'>
+        <div class='flex flex-wrap gap-6'>
           {/* <!-- Card --> */}
           <div class='max-w-xs mx-auto w-80'>
             <div class='relative bg-green-700 shadow-lg rounded-lg  p-5 overflow-hidden'>
@@ -84,9 +86,9 @@ function Mission() {
                 </g>
               </svg>
               {/* <!-- Card content --> */}
-              <div class='relative pt-[6rem] pb-14 flex justify-center flex-col items-center'>
-                <ImSpoonKnife className='text-white text-5xl ' />
-                <h3 class='text-4xl font-thin text-green-50 leading-snug mb-2 uppercase'>
+              <div class='relative pt-[1rem] md:pt-[6rem] pb-2 md:pb-14  flex justify-center flex-col items-center'>
+                <ImSpoonKnife className='text-white text-2xl md:text-5xl ' />
+                <h3 class='text-xl md:text-4xl font-thin text-green-50 leading-snug mb-2 uppercase'>
                   Food
                 </h3>
               </div>
@@ -165,9 +167,9 @@ function Mission() {
                 </g>
               </svg>
               {/* <!-- Card content --> */}
-              <div class='relative pt-[6rem] pb-14 flex justify-center flex-col items-center'>
-                <RiGraduationCapFill className='text-white text-5xl ' />
-                <h3 class='text-4xl font-thin text-green-50 leading-snug mb-2 uppercase'>
+              <div class='relative pt-[1rem] md:pt-[6rem] md:pb-14   flex justify-center flex-col items-center'>
+                <RiGraduationCapFill className='text-white text-3xl md:text-5xl ' />
+                <h3 class='text-xl md:text-4xl font-thin text-green-50 leading-snug mb-2 uppercase'>
                   Education
                 </h3>
               </div>
@@ -246,9 +248,9 @@ function Mission() {
                 </g>
               </svg>
               {/* <!-- Card content --> */}
-              <div class='relative pt-[6rem] pb-14 flex justify-center flex-col items-center'>
-                <FaFirstAid className='text-white text-5xl ' />
-                <h3 class='text-4xl font-thin text-green-50 leading-snug mb-2 uppercase'>
+              <div class='relative pt-[1rem] md:pt-[6rem] md:pb-14   flex justify-center flex-col items-center'>
+                <FaFirstAid className='text-white text-3xl md:text-5xl ' />
+                <h3 class='text-xl md:text-4xl font-thin text-green-50 leading-snug mb-2 uppercase'>
                   Treatment
                 </h3>
               </div>

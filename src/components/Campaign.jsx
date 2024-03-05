@@ -5,108 +5,69 @@ import invasion from '../../public/assets/massiveInvasion.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function Campaign() {
+function Campaign({ campaigns }) {
   return (
-    <div className='bg-[#FAFAFA] py-10  px-24  sm:px-10 md:px-16 lg:px-32 xl:px-40 '>
+    <div className=' bg-green-50 py-10  px-6  sm:px-10 md:px-10 lg:px-20 xl:px-40 '>
       <div className='max-w-5xl mx-auto text-left'>
         <p className='text-green-600 text-lg font-semibold mb-4 text-center uppercase'>
-          Our Campaign
+          Our Campaigns
         </p>
-        <h2 className='text-black text-lg lg:text-lgl font-semibold mb-8'>
-          Giving Help To Those Who Need It
-        </h2>
+        <div className='flex  justify-end items-center'>
+          <h2 className='text-black text-xs hidden  md:text-lg lg:text-lgl font-semibold mb-8'>
+            Giving Help To Those Who Need It
+          </h2>
+        </div>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-20 h-full'>
+        <div className='grid grid-cols-2 md:pt-10 md:grid-cols-3 gap-3 md:gap-20 h-full'>
           {/* Card 1 */}
-          <div className='bg-white rounded-lg overflow-hidden shadow-lg'>
-            <Image
-              src={fundraising}
-              alt='Campaign 1'
-              className='w-full h-56 p-3 md:object-scale-down object-contain'
-            />
-            <div className='p-6 pt-0'>
-              <p className='text-black font-medium mb-2'>
-                Fundraising for children and refugees from donbass
-              </p>
-              {/* <div className='flex justify-between text-gray-300 text-sm'>
+          {campaigns?.slice(0, 3)?.map((campaign) => {
+            return (
+              <div
+                key={campaign._id}
+                className='bg-white rounded-lg overflow-hidden shadow-lg'
+              >
+                <Image
+                  src={`http://localhost:5000/img/${campaign?.image}`}
+                  alt='Campaign 1'
+                  height={400}
+                  width={400}
+                  className='w-full  h-32 md:h-56 md:p-3  md:object-scale-down object-contain'
+                />
+                <div className='p-6 pt-0'>
+                  <p className='font-normal text-gray-500 md:font-medium md:mb-2 text-xs md:text-xl'>
+                    {campaign?.title}
+                  </p>
+                  {/* <div className='flex justify-between text-gray-300 text-sm'>
                 <p className='text-black text-sm '>$5,200</p>
                 <p>$10,400</p>
               </div> */}
-              {/* <div className='bg-gray-300 h-2 w-full mt-2 rounded-full'>
+                  {/* <div className='bg-gray-300 h-2 w-full mt-2 rounded-full'>
                 <div className=' relative bg-green-600 h-2 rounded-lg w-28 mt-0'></div>
               </div> */}
-              <div className='flex flex-row align-middle justify-between mb-[-20px] pb-[-10px]'>
-                <Link
-                  href='/project-donate'
-                  className='bg-green-600 text-center rounded-md py-3 my-5 w-24 text-white text-xs mb-2'
-                >
-                  Donate Now
-                </Link>
-                <p className='text-green-600 self-center'>See Details</p>
+                  <div className='flex flex-col md:flex-row align-middle justify-between '>
+                    <Link
+                      href='/project-donate'
+                      className='bg-green-600 text-center rounded-md py-2 md:py-3 my-2 md:my-5 w-full md:w-24 text-white text-xs '
+                    >
+                      Donate Now
+                    </Link>
+                    <p className='text-green-600 self-center text-xs border py-1 px-5 rounded-md border-green-600'>
+                      See Details
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className='bg-white rounded-lg overflow-hidden shadow-lg'>
-            <Image
-              src={food}
-              alt='Campaign 2'
-              className='w-full h-56 p-3 md:object-scale-down object-contain'
-            />
-            <div className='p-6 pt-0'>
-              <p className='text-black font-medium mb-2'>
-                Food, water and medicine for shelter on the Dnieper
-              </p>
-              {/* <div className='flex justify-between text-gray-300 text-sm'>
-                <p className='text-black text-sm '>$1,124</p>
-                <p>$10,400</p>
-              </div>
-              <div className='bg-gray-300 h-2 w-full mt-2 rounded-full'>
-                <div className=' relative bg-green-600 h-2 rounded-lg w-6 mt-0'></div>
-              </div> */}
-              <div className='flex flex-row align-middle justify-between mb-[-20px]'>
-                <Link
-                  href='/project-donate'
-                  className='bg-green-600 text-center rounded-md py-3 my-5 w-24 text-white text-xs mb-2'
-                >
-                  Donate Now
-                </Link>
-                <p className='text-green-600 self-center'>See Details</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className='bg-white rounded-lg overflow-hidden shadow-lg'>
-            <Image
-              src={invasion}
-              alt='Campaign 3'
-              className='w-full h-56 p-3 md:object-scale-down object-contain'
-            />
-            <div className='p-6 pt-0'>
-              <p className='text-black font-medium mb-2'>
-                massive invasion of Palestine, war in the Gaza strip
-              </p>
-              {/* <div className='flex justify-between text-gray-300 text-sm '>
-                <p className='text-black text-sm '>$28,200</p>
-                <p>$64,000</p>
-              </div>
-              <div className='bg-gray-300 h-2 w-full mt-2 rounded-full'>
-                <div className=' relative bg-green-600 h-2 rounded-lg w-28 mt-0'></div>
-              </div> */}
-              <div className='flex flex-row align-middle justify-between mb-[-20px]'>
-                <Link
-                  href='/project-donate'
-                  className='bg-green-600 text-center rounded-md py-3 my-5 w-24 text-white text-xs mb-2'
-                >
-                  Donate Now
-                </Link>
-                <p className='text-green-600 self-center'>See Details</p>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
+      </div>
+      <div className='flex justify-center pt-10'>
+        <Link
+          href='/campaigns'
+          className='text-sm py-1 md:txt-sm hover:bg-green-100 transition-all bg-white border  border-green-600 cursor-pointer px-4 uppercase text-green-600  mb-8'
+        >
+          See More Campaigns
+        </Link>
       </div>
     </div>
   );

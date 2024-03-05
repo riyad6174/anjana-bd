@@ -5,7 +5,7 @@ function CTA() {
   return (
     <div>
       <div class='bg-green-50  overflow-hidden relative'>
-        <div class='text-start w-1/2 py-12 px-4 sm:px-6 lg:py-16 lg:px-36 z-20'>
+        <div class='text-start w-full md:w-1/2 py-12 px-4 sm:px-6 lg:py-16 lg:px-36 z-20'>
           <h2 class='text-3xl font-bold text-black  sm:text-4xl'>
             <span class='block text-2xl '>Want to be a part of us ?</span>
             <span class='block text-green-600'>It&#x27;s today or never.</span>

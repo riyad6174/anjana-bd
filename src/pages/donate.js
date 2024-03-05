@@ -1,6 +1,4 @@
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
+import { CustomTooltip } from '@/components/CustomTooltip';
 import React, { useState } from 'react';
 
 const SelectableField = ({
@@ -22,26 +20,28 @@ const SelectableField = ({
   };
 
   return (
-    <div className='flex gap-2 '>
-      {options.map((option) => (
-        <div
-          key={option}
-          className={`  py-2 px-8  text-black border border-black flex items-center justify-center cursor-pointer ${
-            selectedOption === option && 'bg-green-600 text-white'
-          }`}
-          onClick={() => handleOptionClick(option)}
-        >
-          {option}
-        </div>
+    <div className='flex gap-2'>
+      {options?.map((option) => (
+        <CustomTooltip key={option._id} content={` ${option.details}`}>
+          <div
+            className={`py-2 px-8 text-black border border-black flex items-center justify-center cursor-pointer ${
+              selectedOption === option && 'bg-green-600 text-white'
+            }`}
+            onClick={() => handleOptionClick(option)}
+          >
+            {option.amount}
+          </div>
+        </CustomTooltip>
       ))}
     </div>
   );
 };
 
-const DonatePage = () => {
-  const mockData = ['12000', '24000', '40000', '100000'];
-  const [selectedOption, setSelectedOption] = useState(mockData[0]);
+const DonatePage = ({ amounts }) => {
+  const [selectedOption, setSelectedOption] = useState(amounts[0]);
   const [inputValue, setInputValue] = useState('');
+
+  console.log(amounts);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -58,17 +58,20 @@ const DonatePage = () => {
           className='h-64 w-full object-cover grayscale'
         />
       </div>
-      <form className='flex flex-col container py-16'>
+      <form className='flex flex-col container py-16 px-4'>
+        <label className='uppercase text-xs font-semibold text-gray-400 mb-2'>
+          Select Amount
+        </label>
         <div className='flex justify-start items-center flex-wrap gap-2'>
           <SelectableField
-            options={mockData}
+            options={amounts}
             onSelect={setSelectedOption}
             selectedOption={selectedOption}
             inputFieldValue={inputValue}
             onInputChange={handleInputChange}
           />
 
-          <div className='px-2'>
+          <div className=''>
             <input
               type='text'
               value={inputValue}
@@ -79,6 +82,26 @@ const DonatePage = () => {
           </div>
         </div>
         <div className='mt-4'>
+          <div className='grid grid-cols-3 gap-8 mb-4'>
+            <div className='flex flex-col col-span-3 md:col-span-1'>
+              <label className='uppercase text-xs font-semibold mb-2 text-gray-400'>
+                Name
+              </label>
+              <input type='text' className='border border-gray-300 p-2' />
+            </div>
+            <div className='flex flex-col col-span-3 md:col-span-1'>
+              <label className='uppercase text-xs font-semibold mb-2 text-gray-400'>
+                Email
+              </label>
+              <input type='email' className='border border-gray-300 p-2' />
+            </div>
+            <div className='flex flex-col col-span-3 md:col-span-1'>
+              <label className='uppercase text-xs font-semibold mb-2 text-gray-400'>
+                Contact number
+              </label>
+              <input type='text' className='border border-gray-300 p-2' />
+            </div>
+          </div>
           {/* Message field */}
           <textarea
             className='w-full p-2 border border-gray-300'
@@ -98,7 +121,7 @@ const DonatePage = () => {
                 for='radioButton1'
                 class='pl-3 text-sm font-medium text-[#07074D]'
               >
-                I WANT TO PROVIDE MY INFORMATION
+                I DON&apos;T WANT TO PROVIDE MY INFORMATION
               </label>
             </div>
           </div>
@@ -115,3 +138,16 @@ const DonatePage = () => {
 };
 
 export default DonatePage;
+
+export async function getStaticProps() {
+  const res = await fetch('http://localhost:5000/api/frontend/donate-amount');
+  const amounts = await res.json();
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      amounts,
+    },
+  };
+}

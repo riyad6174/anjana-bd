@@ -9,12 +9,12 @@ import Link from 'next/link';
 
 function Hero() {
   return (
-    <div className='hero-bg flex bg-cover h-auto sm:h-[680px] w-full flex-col sm:flex-row justify-center py-7  px-8 sm:px-10 md:px-16 lg:px-32 xl:px-40'>
+    <div className='hero-bg flex bg-cover h-auto sm:h-[680px] w-full flex-col sm:flex-row justify-center py-1 md:py-7  px-8 sm:px-10 md:px-16 lg:px-32 xl:px-40'>
       <div className='flex-1 flex flex-col w-full justify-center text-left sm:justify-start sm:text-left mb-4 sm:mb-0'>
         <p className='text-md text-green-600 mb-2 pt-7'>
           TRUSTED CHARITY COMPANY
         </p>
-        <h1 className='font-bold text-2xl sm:text-2xl md:text-4xl lg:text-5xl leading-snug mb-2'>
+        <h1 className='font-bold  text-xl md:text-4xl lg:text-5xl leading-snug mb-2'>
           <span className='text-black'>Let&apos;s Help And Make</span>
           <br />
           <span className='text-black'>
@@ -28,7 +28,7 @@ function Hero() {
           let&apos;s donate now to help fellow humans in need
         </p>
         <div className='flex flex-row items-left  sm:space-x-14'>
-          <button className='bg-green-600 rounded-md h-14 self-center py-1 px-10 md:px-10 justify-start  text-white text-xs'>
+          <button className='bg-green-600 rounded-md h-10 self-center py-1 px-6 md:h-14 md:px-10 justify-start  text-white text-xs'>
             Donate Here
           </button>
           <a href='#' className='inline ml-10'>
@@ -85,21 +85,21 @@ function Hero() {
           </div>
         </div> */}
         <div class='flex flex-row flex-wrap -mx-2 pt-8'>
-          <div class='w-full sm:w-1/2 h-32 md:h-48 mb-4 sm:mb-0  border'>
+          <div class=' w-1/2 md:w-1/2 h-32 md:h-48  overflow-hidden  border'>
             <img
               src='./assets/hand.jpg'
               alt='1'
-              className='object-cover grayscale'
+              className='object-cover grayscale w-full h-full'
             />
           </div>
-          <div class='w-full sm:w-1/2 h-32 md:h-48 mb-4 sm:mb-0  border overflow-hidden'>
+          <div class='w-1/2 md:w-1/2 h-32 md:h-48   border overflow-hidden'>
             <img
               src='./assets/child2.png'
               alt='1'
-              className='object-cover grayscale w-full'
+              className='object-cover grayscale w-full h-full'
             />
           </div>{' '}
-          <div class='w-full sm:w-1/2 h-32 md:h-48 mb-4 sm:mb-0  border'>
+          <div class='w-1/2 md:w-1/2 h-32 md:h-48   border overflow-hidden'>
             <img
               src='./assets/old.jpg'
               alt='1'
@@ -108,7 +108,7 @@ function Hero() {
           </div>{' '}
           <Link
             href='/projects'
-            class='relative w-full sm:w-1/2 h-32 md:h-48 mb-4 sm:mb-0  border'
+            class='relative w-1/2 md:w-1/2 h-32 md:h-48 mb-4 sm:mb-0  border overflow-hidden'
           >
             <img
               src='./assets/old2.jpg'

@@ -1,7 +1,9 @@
+import { filePath } from '@/utils/network';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-function SponsorCard() {
+function SponsorCard({ sponsorData }) {
   return (
     <div className='flex-shrink-0 m-6 relative overflow-hidden bg-green-600 rounded-lg max-w-xs shadow-lg group'>
       <svg
@@ -37,22 +39,29 @@ function SponsorCard() {
             opacity: '0.2',
           }}
         ></div>
-        <img
+        <Image
+          width={400}
+          height={400}
           className='relative w-full h-56 object-cover grayscale'
-          src='https://images.pexels.com/photos/10456563/pexels-photo-10456563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          src={`${filePath}/${sponsorData?.image}`}
           alt=''
         />
       </div>
       <div className='relative text-white px-6 pb-6 mt-6'>
         <div className='flex flex-col space-y-4'>
-          <span className='block font-semibold text-md uppercase'>
-            Adi Chakma
+          <Link
+            href={`/sponsor/${sponsorData._id}`}
+            className='block font-semibold text-md uppercase'
+          >
+            {sponsorData?.name}
+          </Link>
+          <span className='block font-thin  text-sm '>
+            Yearly {sponsorData?.price}
           </span>
-          <span className='block font-thin  text-sm '>Yearly 36,000</span>
           <div className='flex justify-between'>
             <span>
               <Link
-                href='/sponsor-donate'
+                href={`/sponsor/${sponsorData._id}`}
                 className='text-center z-20 bg-green-300 rounded-sm  text-green-800 text-xs font-mono px-4 py-2 leading-none  items-center'
               >
                 Read More
@@ -60,7 +69,7 @@ function SponsorCard() {
             </span>
             <span>
               <Link
-                href='/sponsor-donate'
+                href={`/sponsor/${sponsorData._id}`}
                 className='text-center z-20 bg-orange-300 rounded-sm text-orange-500 text-xs font-mono px-4 py-2 leading-none  items-center'
               >
                 Sponsor

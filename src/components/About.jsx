@@ -9,7 +9,7 @@ function About() {
       <p className='text-green-600 font-semibold mb-4 text-center pt-10 uppercase text-xl'>
         Who we are
       </p>
-      <div className='grid grid-cols-1 md:grid-cols-2  px-8 sm:px-10 md:px-16 lg:px-32 xl:px-40'>
+      <div className='grid grid-cols-1 md:grid-cols-2  px-8 sm:px-2 md:px-16 lg:px-32 xl:px-40'>
         {/* Column 1 with image */}
 
         <div className='p-10 md:p-10 sm:p-5 lg:p-12'>
@@ -21,7 +21,7 @@ function About() {
         </div>
 
         {/* Column 2 with text content */}
-        <div className='p-6 bg-white py-10 md:py-32 px-10 md:px-0 lg:p-20'>
+        <div className='p-6 bg-white py-10 md:py-32 px-2 md:px-0 lg:p-20'>
           <h2 className='text-black font-bold mb-2 text-xl sm:text-2xl lg:text-4xl'>
             We&apos;re Non-Profit Charity <br />& NGO Organization
           </h2>
@@ -49,7 +49,7 @@ function About() {
               Share your love for community
             </li>
           </ul>
-          <button className='bg-green-600 rounded-md py-3 my-5 w-24 text-white text-xs mb-2'>
+          <button className='bg-green-600  rounded-md py-3 my-5 w-24 text-white text-xs mb-2'>
             About Us
           </button>
         </div>

@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div>
       <footer class='bg-green-100'>
-        <div class='mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8'>
+        <div class='mx-auto max-w-screen-xl px-4 py-10 sm:px-6 lg:px-8'>
           <div class='lg:flex lg:items-start lg:gap-8'>
             <div class='text-teal-600'>
               <svg
@@ -128,13 +128,13 @@ function Footer() {
                   </li>
 
                   <li>
-                    <a
-                      href='#'
+                    <Link
+                      href='/teams'
                       class='text-gray-700 transition hover:opacity-75'
                     >
                       {' '}
                       Meet the Team{' '}
-                    </a>
+                    </Link>
                   </li>
 
                   <li>

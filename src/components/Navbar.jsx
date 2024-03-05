@@ -20,7 +20,7 @@ function Navbar() {
           height={400}
           src={logo}
           alt='Logo'
-          className='w-36 h-36 mr-2'
+          className='w-24 h-24 md:w-36 md:h-36  mr-2'
         />
         {/* <p className='text-black font-semibold text-sm'>Donaty</p> */}
       </Link>
@@ -36,7 +36,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href='/campaign' className='text-green-600'>
+            <Link href='/campaigns' className='text-green-600'>
               Our Campaign
             </Link>
           </li>
