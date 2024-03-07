@@ -10,7 +10,7 @@ function Page({ campaign }) {
         <span className='flex justify-center uppercase text-xl text-green-600 font-semibold'>
           Our campaigns
         </span>
-        <div className='container grid grid-cols-2 gap-6'>
+        <div className='container grid grid-cols-2 gap-6 px-2 pt-10 pb-20'>
           {campaign?.map((campaign) => {
             return <CampaignCard key={campaign._id} project={campaign} />;
           })}

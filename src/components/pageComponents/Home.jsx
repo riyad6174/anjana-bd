@@ -7,18 +7,19 @@ import CTA from '../CTA';
 import Projects from '../Projects';
 import JoinUs from '../JoinUs';
 import Mission from '../Mission';
+import TeamMembers from '../TeamMembers';
 
 function Home({ projects, campaigns }) {
   return (
     <>
-      <Hero />
+      <Hero projects={projects} />
       <Mission />
       <Campaign campaigns={campaigns} />
       <JoinUs />
       <Projects projects={projects} />
 
       <About />
-
+      <TeamMembers />
       <CTA />
     </>
   );

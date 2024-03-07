@@ -40,16 +40,12 @@ function Navbar() {
               Our Campaign
             </Link>
           </li>
-          {/* <li>
-            <Link href='/about-us' className='text-green-600'>
-              About Us
-            </Link>
-          </li> */}
           <li>
-            <Link href='/login' className='text-green-600'>
-              Sign In
+            <Link href='/volunteer' className='text-green-600'>
+              Join Us
             </Link>
           </li>
+
           <li>
             <Link href='/dashboard' className='text-green-600'>
               Dashboard

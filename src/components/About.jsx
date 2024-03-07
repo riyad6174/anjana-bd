@@ -49,9 +49,9 @@ function About() {
               Share your love for community
             </li>
           </ul>
-          <button className='bg-green-600  rounded-md py-3 my-5 w-24 text-white text-xs mb-2'>
+          {/* <button className='bg-green-600  rounded-md py-3 my-5 w-24 text-white text-xs mb-2'>
             About Us
-          </button>
+          </button> */}
         </div>
       </div>
     </>

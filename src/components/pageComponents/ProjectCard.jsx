@@ -24,7 +24,7 @@ function ProjectCard({ project }) {
                   {project?.title}
                 </p>
               </Link>
-              <p class=' text-gray-500 text-base pt-2'>
+              <p class=' text-gray-500 text-base pt-2 line-clamp-2 md:line-clamp-3'>
                 {project?.description}
               </p>
             </div>

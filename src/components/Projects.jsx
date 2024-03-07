@@ -69,7 +69,7 @@ function Projects({ projects }) {
                   </div>
                   <div className='relative text-white px-2 md:px-6 pb-6 mt-6'>
                     <div className='flex flex-col items-center space-y-4'>
-                      <span className='block font-normal md:font-semibold text-sm md:text-lg'>
+                      <span className='block font-normal md:font-semibold text-sm md:text-lg line-clamp-1'>
                         {project?.title}
                       </span>
                       <span>

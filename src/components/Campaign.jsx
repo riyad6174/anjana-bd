@@ -26,15 +26,17 @@ function Campaign({ campaigns }) {
                 key={campaign._id}
                 className='bg-white rounded-lg overflow-hidden shadow-lg'
               >
-                <Image
-                  src={`http://localhost:5000/img/${campaign?.image}`}
-                  alt='Campaign 1'
-                  height={400}
-                  width={400}
-                  className='w-full  h-32 md:h-56 md:p-3  md:object-scale-down object-contain'
-                />
+                <div className='h-32 md:h-56 '>
+                  <Image
+                    src={`http://localhost:5000/img/${campaign?.image}`}
+                    alt='Campaign 1'
+                    height={400}
+                    width={400}
+                    className='w-full h-full  md:p-3   object-cover'
+                  />
+                </div>
                 <div className='p-6 pt-0'>
-                  <p className='font-normal text-gray-500 md:font-medium md:mb-2 text-xs md:text-xl'>
+                  <p className='font-normal text-gray-500 md:font-medium md:mb-2 text-xs md:text-lg line-clamp-1'>
                     {campaign?.title}
                   </p>
                   {/* <div className='flex justify-between text-gray-300 text-sm'>
@@ -46,14 +48,17 @@ function Campaign({ campaigns }) {
               </div> */}
                   <div className='flex flex-col md:flex-row align-middle justify-between '>
                     <Link
-                      href='/project-donate'
+                      href={`/campaign/${campaign._id}`}
                       className='bg-green-600 text-center rounded-md py-2 md:py-3 my-2 md:my-5 w-full md:w-24 text-white text-xs '
                     >
                       Donate Now
                     </Link>
-                    <p className='text-green-600 self-center text-xs border py-1 px-5 rounded-md border-green-600'>
+                    <Link
+                      href={`/campaign/${campaign._id}`}
+                      className='text-green-600 self-center text-xs border py-1 md:py-3 px-5 rounded-md border-green-600'
+                    >
                       See Details
-                    </p>
+                    </Link>
                   </div>
                 </div>
               </div>

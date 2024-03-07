@@ -6,10 +6,11 @@ import bgImage from '../../public/assets/herocolbg.png';
 import Image from 'next/image';
 import { BsPlus } from 'react-icons/bs';
 import Link from 'next/link';
+import { filePath } from '@/utils/network';
 
-function Hero() {
+function Hero({ projects }) {
   return (
-    <div className='hero-bg flex bg-cover h-auto sm:h-[680px] w-full flex-col sm:flex-row justify-center py-1 md:py-7  px-8 sm:px-10 md:px-16 lg:px-32 xl:px-40'>
+    <div className='hero-bg flex bg-cover md:h-[580px] h-[680px] w-full flex-col sm:flex-row justify-center py-1 md:py-7  px-8 sm:px-10 md:px-16 lg:px-32 xl:px-40'>
       <div className='flex-1 flex flex-col w-full justify-center text-left sm:justify-start sm:text-left mb-4 sm:mb-0'>
         <p className='text-md text-green-600 mb-2 pt-7'>
           TRUSTED CHARITY COMPANY
@@ -29,7 +30,7 @@ function Hero() {
         </p>
         <div className='flex flex-row items-left  sm:space-x-14'>
           <button className='bg-green-600 rounded-md h-10 self-center py-1 px-6 md:h-14 md:px-10 justify-start  text-white text-xs'>
-            Donate Here
+            <Link href='/donate'>Donate Here</Link>
           </button>
           <a href='#' className='inline ml-10'>
             <Image src={activity} width={80} alt='Link' />
@@ -84,15 +85,27 @@ function Hero() {
             </div>
           </div>
         </div> */}
+
         <div class='flex flex-row flex-wrap -mx-2 pt-8'>
-          <div class=' w-1/2 md:w-1/2 h-32 md:h-48  overflow-hidden  border'>
-            <img
-              src='./assets/hand.jpg'
-              alt='1'
-              className='object-cover grayscale w-full h-full'
-            />
-          </div>
-          <div class='w-1/2 md:w-1/2 h-32 md:h-48   border overflow-hidden'>
+          {projects.slice(0, 3)?.map((project) => {
+            return (
+              <div
+                key={project._id}
+                class=' w-1/2 md:w-1/2 h-32 md:h-48  overflow-hidden  border'
+              >
+                <Link href={`/project/${project._id}`}>
+                  <Image
+                    src={`${filePath}/${project?.image}`}
+                    height={300}
+                    width={400}
+                    alt='1'
+                    className='object-cover grayscale w-full h-full'
+                  />
+                </Link>
+              </div>
+            );
+          })}
+          {/* <div class='w-1/2 md:w-1/2 h-32 md:h-48   border overflow-hidden'>
             <img
               src='./assets/child2.png'
               alt='1'
@@ -105,7 +118,7 @@ function Hero() {
               alt='1'
               className='object-cover grayscale w-full h-full'
             />
-          </div>{' '}
+          </div>{' '} */}
           <Link
             href='/projects'
             class='relative w-1/2 md:w-1/2 h-32 md:h-48 mb-4 sm:mb-0  border overflow-hidden'

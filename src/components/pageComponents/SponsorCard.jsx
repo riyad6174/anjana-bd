@@ -51,30 +51,27 @@ function SponsorCard({ sponsorData }) {
         <div className='flex flex-col space-y-4'>
           <Link
             href={`/sponsor/${sponsorData._id}`}
-            className='block font-semibold text-md uppercase'
+            className='block font-semibold  uppercase line-clamp-1'
           >
-            {sponsorData?.name}
+            <p className='line-clamp-1 text-sm'> {sponsorData?.name}</p>
           </Link>
           <span className='block font-thin  text-sm '>
             Yearly {sponsorData?.price}
           </span>
           <div className='flex justify-between'>
-            <span>
-              <Link
-                href={`/sponsor/${sponsorData._id}`}
-                className='text-center z-20 bg-green-300 rounded-sm  text-green-800 text-xs font-mono px-4 py-2 leading-none  items-center'
-              >
-                Read More
-              </Link>
-            </span>
-            <span>
-              <Link
-                href={`/sponsor/${sponsorData._id}`}
-                className='text-center z-20 bg-orange-300 rounded-sm text-orange-500 text-xs font-mono px-4 py-2 leading-none  items-center'
-              >
-                Sponsor
-              </Link>
-            </span>
+            <Link
+              href={`/sponsor/${sponsorData._id}`}
+              className='text-center z-20 bg-green-300 rounded-sm  text-green-800 text-xs font-mono px-4 py-2 leading-none  items-center'
+            >
+              Read More
+            </Link>
+
+            <Link
+              href={`/sponsor/${sponsorData._id}`}
+              className='text-center z-20 bg-orange-300 rounded-sm text-orange-500 text-xs font-mono px-4 py-2 leading-none  items-center'
+            >
+              Sponsor
+            </Link>
           </div>
         </div>
       </div>

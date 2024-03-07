@@ -46,6 +46,7 @@ const DonatePage = ({ project }) => {
   const mockData = ['12000', '24000', '40000', '100000'];
   const [selectedOption, setSelectedOption] = useState(mockData[0]);
   const [inputValue, setInputValue] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
 
   const router = useRouter();
   //   const { id } = router.query;
@@ -78,7 +79,10 @@ const DonatePage = ({ project }) => {
         </div>
         <div className='col-span-4 md:col-span-3 '>
           <span className='text-3xl text-green-600 uppercase'>Donate Here</span>
-          <form className='flex  flex-col container py-8 md:py-16'>
+          <form className='flex flex-col container py-8 px-4'>
+            <label className='uppercase text-xs font-semibold text-gray-400 mb-2'>
+              Select Amount
+            </label>
             <div className='flex justify-start items-center flex-wrap gap-2'>
               <SelectableField
                 options={project[0].amounts}
@@ -88,12 +92,12 @@ const DonatePage = ({ project }) => {
                 onInputChange={handleInputChange}
               />
 
-              <div className='px-2'>
+              <div className=''>
                 <input
                   type='text'
                   value={inputValue}
                   onChange={handleInputChange}
-                  className='w-full py-2 border rounded-full px-2 border-black'
+                  className='w-full py-2 border rounded-3xl px-2 border-black'
                   placeholder='Custom amount'
                 />
               </div>
@@ -104,26 +108,52 @@ const DonatePage = ({ project }) => {
                 className='w-full p-2 border border-gray-300'
                 placeholder='Your message here'
               ></textarea>
-            </div>
-            <div class='mb-5'>
-              <div class='flex items-center space-x-6'>
-                <div class='flex items-center'>
-                  <input
-                    type='checkbox'
-                    name='radio1'
-                    id='radioButton1'
-                    class='h-5 w-5'
-                  />
-                  <label
-                    for='radioButton1'
-                    class='pl-3 text-sm font-medium text-[#07074D]'
-                  >
-                    I WANT TO PROVIDE MY INFORMATION
-                  </label>
+              <div class='my-5'>
+                <div class='flex items-center space-x-6'>
+                  <div class='flex items-center'>
+                    <input
+                      type='checkbox'
+                      name='radio1'
+                      checked={isChecked}
+                      onChange={() => setIsChecked(!isChecked)}
+                      id='radioButton1'
+                      class='h-5 w-5'
+                    />
+                    <label
+                      for='radioButton1'
+                      class='pl-3 text-sm font-medium text-[#07074D]'
+                    >
+                      I DON&apos;T WANT TO PROVIDE MY INFORMATION
+                    </label>
+                  </div>
                 </div>
               </div>
+              {!isChecked && (
+                <div className='grid grid-cols-3 gap-8 mb-4'>
+                  <div className='flex flex-col col-span-3 md:col-span-1'>
+                    <label className='uppercase text-xs font-semibold mb-2 text-gray-400'>
+                      Name
+                    </label>
+                    <input type='text' className='border border-gray-300 p-2' />
+                  </div>
+                  <div className='flex flex-col col-span-3 md:col-span-1'>
+                    <label className='uppercase text-xs font-semibold mb-2 text-gray-400'>
+                      Email
+                    </label>
+                    <input
+                      type='email'
+                      className='border border-gray-300 p-2'
+                    />
+                  </div>
+                  <div className='flex flex-col col-span-3 md:col-span-1'>
+                    <label className='uppercase text-xs font-semibold mb-2 text-gray-400'>
+                      Contact number
+                    </label>
+                    <input type='text' className='border border-gray-300 p-2' />
+                  </div>
+                </div>
+              )}
             </div>
-
             <div className='text-center '>
               <button class='text-center hover:shadow-form rounded-md bg-orange-400 py-3 px-8 text-base font-semibold text-white outline-none'>
                 Donate
