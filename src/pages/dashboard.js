@@ -1,8 +1,6 @@
 import UserDonationList from '@/components/pageComponents/UserDonationList';
 import { tableCustomStyles } from '@/utils/tableStyle';
 import React, { useState } from 'react';
-import DataTable from 'react-data-table-component';
-import { BsDownload } from 'react-icons/bs';
 
 function Page() {
   return (
@@ -115,9 +113,7 @@ function Page() {
                   </span>
                   <span class='tracking-wide'>About</span>
                 </div>
-                <button className='tracking-wide text-sm uppercase bg-violet-400 text-white px-4 py-1'>
-                  Join as Volunteer
-                </button>
+
                 <button className='tracking-wide text-sm uppercase bg-violet-400 text-white px-4 py-1'>
                   Update Profile
                 </button>
@@ -159,6 +155,35 @@ function Page() {
                   <div class='grid grid-cols-2'>
                     <div class='px-4 py-2 font-semibold'>Birthday</div>
                     <div class='px-4 py-2'>Feb 06, 1998</div>
+                  </div>
+                </div>
+              </div>
+              <div class='flex items-center justify-between space-x-2 font-semibold text-gray-900 leading-8'>
+                <div className='flex items-center gap-x-2'>
+                  <span clas='text-green-500'>
+                    <svg
+                      class='h-5'
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth='2'
+                        d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
+                      />
+                    </svg>
+                  </span>
+                  <span class='tracking-wide'>Volunteer Details</span>
+                </div>
+              </div>
+              <div class='text-gray-700 py-6'>
+                <div class='grid md:grid-cols-2 text-sm'>
+                  <div class='grid grid-cols-2'>
+                    <div class='px-4 py-2 font-semibold'>Status</div>
+                    <div class='px-4 py-2 text-yellow-600'>Not a Volunteer</div>
                   </div>
                 </div>
               </div>

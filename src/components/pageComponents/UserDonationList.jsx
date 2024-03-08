@@ -4,7 +4,7 @@ import DataTable from 'react-data-table-component';
 import { BsDownload } from 'react-icons/bs';
 
 function UserDonationList() {
-  const [data, setdata] = useState(['2014-2015', '2016-2017']);
+  const [data, setdata] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('specialMeal');
 
