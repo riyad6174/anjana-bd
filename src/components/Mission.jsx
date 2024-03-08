@@ -25,10 +25,10 @@ function Mission() {
               >
                 <defs>
                   <linearGradient x1='50%' y1='0%' x2='50%' y2='96.22%' id='a'>
-                    <stop stop-color='#818CF8' stop-opacity='.88' offset='0%' />
+                    <stop stop-color='#818CF8' stopOpacity='.88' offset='0%' />
                     <stop
                       stop-color='#818CF8'
-                      stop-opacity='.24'
+                      stopOpacity='.24'
                       offset='100%'
                     />
                   </linearGradient>
@@ -37,7 +37,7 @@ function Mission() {
                   transform='translate(-719 -96)'
                   stroke='url(#a)'
                   fill='none'
-                  fill-rule='evenodd'
+                  fillRule='evenodd'
                 >
                   <path d='M802.959 69.706c.987-31.014 27.104-55.35 58.333-54.356 31.23.994 55.747 26.94 54.76 57.954-.987 31.013-27.103 55.349-58.333 54.356-31.23-.994-55.747-26.94-54.76-57.954Z' />
                   <path d='M859.16 15.329c32.617-.2 59.212 24.794 59.4 55.824.19 31.028-26.097 56.343-58.714 56.543-32.617.2-59.212-24.793-59.4-55.823-.19-31.03 26.097-56.346 58.714-56.544Z' />
@@ -106,10 +106,10 @@ function Mission() {
               >
                 <defs>
                   <linearGradient x1='50%' y1='0%' x2='50%' y2='96.22%' id='a'>
-                    <stop stop-color='#818CF8' stop-opacity='.88' offset='0%' />
+                    <stop stop-color='#818CF8' stopOpacity='.88' offset='0%' />
                     <stop
                       stop-color='#818CF8'
-                      stop-opacity='.24'
+                      stopOpacity='.24'
                       offset='100%'
                     />
                   </linearGradient>
@@ -118,7 +118,7 @@ function Mission() {
                   transform='translate(-719 -96)'
                   stroke='url(#a)'
                   fill='none'
-                  fill-rule='evenodd'
+                  fillRule='evenodd'
                 >
                   <path d='M802.959 69.706c.987-31.014 27.104-55.35 58.333-54.356 31.23.994 55.747 26.94 54.76 57.954-.987 31.013-27.103 55.349-58.333 54.356-31.23-.994-55.747-26.94-54.76-57.954Z' />
                   <path d='M859.16 15.329c32.617-.2 59.212 24.794 59.4 55.824.19 31.028-26.097 56.343-58.714 56.543-32.617.2-59.212-24.793-59.4-55.823-.19-31.03 26.097-56.346 58.714-56.544Z' />
@@ -187,10 +187,10 @@ function Mission() {
               >
                 <defs>
                   <linearGradient x1='50%' y1='0%' x2='50%' y2='96.22%' id='a'>
-                    <stop stop-color='#818CF8' stop-opacity='.88' offset='0%' />
+                    <stop stop-color='#818CF8' stopOpacity='.88' offset='0%' />
                     <stop
                       stop-color='#818CF8'
-                      stop-opacity='.24'
+                      stopOpacity='.24'
                       offset='100%'
                     />
                   </linearGradient>
@@ -199,7 +199,7 @@ function Mission() {
                   transform='translate(-719 -96)'
                   stroke='url(#a)'
                   fill='none'
-                  fill-rule='evenodd'
+                  fillRule='evenodd'
                 >
                   <path d='M802.959 69.706c.987-31.014 27.104-55.35 58.333-54.356 31.23.994 55.747 26.94 54.76 57.954-.987 31.013-27.103 55.349-58.333 54.356-31.23-.994-55.747-26.94-54.76-57.954Z' />
                   <path d='M859.16 15.329c32.617-.2 59.212 24.794 59.4 55.824.19 31.028-26.097 56.343-58.714 56.543-32.617.2-59.212-24.793-59.4-55.823-.19-31.03 26.097-56.346 58.714-56.544Z' />

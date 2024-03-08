@@ -36,9 +36,9 @@ function JoinUs() {
                 <svg
                   fill='none'
                   stroke='currentColor'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
                   class='text-green-500 w-12 h-12 mb-3 inline-block'
                   viewBox='0 0 24 24'
                 >
