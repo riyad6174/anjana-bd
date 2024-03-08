@@ -143,15 +143,26 @@ const DonatePage = ({ amounts }) => {
 
 export default DonatePage;
 
-export async function getStaticProps() {
-  const res = await fetch('http://localhost:5000/api/frontend/donate-amount');
-  const amounts = await res.json();
+export async function getServerSideProps() {
+  try {
+    const res = await fetch('http://localhost:5000/api/frontend/donate-amount');
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
 
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
-  return {
-    props: {
-      amounts,
-    },
-  };
+    const amounts = await res.json();
+
+    return {
+      props: {
+        amounts,
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching data:', error.message);
+    return {
+      props: {
+        amounts: [],
+      },
+    };
+  }
 }
