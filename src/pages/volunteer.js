@@ -89,6 +89,26 @@ function Page() {
             placeholder='Enter Country Name'
           />
         </div>
+        <div className='mb-4'>
+          <label className='block text-sm font-semibold text-gray-600'>
+            NID FRONT IMAGE *
+          </label>
+          <input
+            type='file'
+            className='w-full p-2 border rounded-md'
+            placeholder='Enter Your Interest'
+          />
+        </div>
+        <div className='mb-4'>
+          <label className='block text-sm font-semibold text-gray-600'>
+            NID BACK IMAGE *
+          </label>
+          <input
+            type='file'
+            className='w-full p-2 border rounded-md'
+            placeholder='Enter Your Interest'
+          />
+        </div>
 
         {/* Add the remaining form fields with similar structure */}
 

@@ -8,6 +8,7 @@ import Projects from '../Projects';
 import JoinUs from '../JoinUs';
 import Mission from '../Mission';
 import TeamMembers from '../TeamMembers';
+import VideoSlider from '../VideoSlider';
 
 function Home({ projects, campaigns }) {
   return (
@@ -20,6 +21,7 @@ function Home({ projects, campaigns }) {
 
       <About />
       <TeamMembers />
+      <VideoSlider />
       <CTA />
     </>
   );

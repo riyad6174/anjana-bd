@@ -6,7 +6,7 @@ function Page() {
   return (
     <div>
       <div class='container  mx-auto  p-5'>
-        <div className='grid grid-cols-4 gap-6 px-3'>
+        <div className='grid grid-cols-4 gap-6 px-3 pb-10'>
           <div className='shadow-md rounded-lg text-gray-600 border-2 border-green-600 flex flex-col justify-center items-center py-4 '>
             <span className='text-sm  uppercase'> Donation Amount</span>
             <span className='text-3xl'> 30K</span>
@@ -51,9 +51,9 @@ function Page() {
                 <li class='flex items-center py-3'>
                   <span>Logout From here</span>
                   <span class='ml-auto'>
-                    <span class='bg-red-500 py-1 px-2 rounded text-white text-sm'>
+                    <button class='bg-red-500 py-1 px-2 rounded text-white text-sm'>
                       Logout{' '}
-                    </span>
+                    </button>
                   </span>
                 </li>
                 {/* <li class='flex items-center py-3'>

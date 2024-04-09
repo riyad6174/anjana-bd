@@ -1,6 +1,13 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 const Page = () => {
+  const [activeTab, setActiveTab] = useState('app');
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
   return (
     <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
       <div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
@@ -42,6 +49,68 @@ const Page = () => {
           accusantium doloremque rem aperiam, eaque ipsa quae.
         </p>
       </div>
+      <ul
+        className='flex flex-wrap  list-none  w-1/3 mb-6  mx-auto bg-green-100'
+        role='list'
+      >
+        <li
+          className={`flex-auto text-center ${
+            activeTab === 'app' ? 'bg-green-200' : ''
+          }`}
+        >
+          <a
+            className='flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out  rounded-lg cursor-pointer text-green-700 bg-inherit'
+            onClick={() => handleTabClick('app')}
+            role='tab'
+            aria-selected={activeTab === 'app'}
+          >
+            <span className='ml-1 py-1 text-xs uppercase'>ALL</span>
+          </a>
+        </li>
+        <li
+          className={`flex-auto text-center ${
+            activeTab === 'message' ? 'bg-green-200' : ''
+          }`}
+        >
+          <a
+            className='flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out  rounded-lg cursor-pointer text-green-700 bg-inherit'
+            onClick={() => handleTabClick('message')}
+            role='tab'
+            aria-selected={activeTab === 'message'}
+          >
+            <span className='ml-1 py-1 text-xs uppercase'>Authority</span>
+          </a>
+        </li>
+        <li
+          className={`flex-auto text-center ${
+            activeTab === 'settings' ? 'bg-green-200' : ''
+          }`}
+        >
+          <a
+            className='flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out  rounded-lg cursor-pointer text-green-700 bg-inherit'
+            onClick={() => handleTabClick('settings')}
+            role='tab'
+            aria-selected={activeTab === 'settings'}
+          >
+            <span className='ml-1 py-1 text-xs uppercase'>Volunteer</span>
+          </a>
+        </li>
+        <li
+          className={`flex-auto text-center ${
+            activeTab === 'settings' ? 'bg-green-200' : ''
+          }`}
+        >
+          <a
+            className='flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out  rounded-lg cursor-pointer text-green-700 bg-inherit'
+            onClick={() => handleTabClick('settings')}
+            role='tab'
+            aria-selected={activeTab === 'settings'}
+          >
+            <span className='ml-1 py-1 text-xs uppercase'>Developer</span>
+          </a>
+        </li>
+      </ul>
+
       <div className='grid gap-10 sm:grid-cols-2 lg:grid-cols-4'>
         <div>
           <div className='relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl'>

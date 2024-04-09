@@ -68,7 +68,7 @@ function SponsorCard({ sponsorData }) {
 
             <Link
               href={`/sponsor/${sponsorData._id}`}
-              className='text-center z-20 bg-orange-300 rounded-sm text-orange-500 text-xs font-mono px-4 py-2 leading-none  items-center'
+              className='text-center z-20 bg-orange-400 rounded-sm text-white text-xs font-mono px-4 py-2 leading-none  items-center'
             >
               Sponsor
             </Link>

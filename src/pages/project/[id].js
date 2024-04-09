@@ -154,7 +154,27 @@ const DonatePage = ({ project }) => {
                 </div>
               )}
             </div>
-            <div className='text-center '>
+            <div className='text-center flex items-center justify-center flex-col'>
+              <div class='my-5'>
+                <div class='flex items-center space-x-6'>
+                  <div class='flex items-center'>
+                    <input
+                      type='checkbox'
+                      name='radio1'
+                      // checked={isChecked}
+                      // onChange={() => setIsChecked(!isChecked)}
+                      id='radioButton2'
+                      class='h-5 w-5'
+                    />
+                    <label
+                      for='radioButton2'
+                      class='pl-3 text-sm font-medium text-[#07074D]'
+                    >
+                      I DON&apos;T WANT TO RECEIVE ANY PROMOTIONAL MAIL
+                    </label>
+                  </div>
+                </div>
+              </div>
               <button class='text-center hover:shadow-form rounded-md bg-orange-400 py-3 px-8 text-base font-semibold text-white outline-none'>
                 Donate
               </button>
