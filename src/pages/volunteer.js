@@ -3,7 +3,7 @@ import React from 'react';
 
 function Page() {
   return (
-    <div>
+    <div className='pt-4'>
       <div className=''>
         <img
           src='./assets/volunteer3.jpg'
@@ -81,12 +81,12 @@ function Page() {
 
         <div className='mb-4'>
           <label className='block text-sm font-semibold text-gray-600'>
-            BRANCH *
+            CITY *
           </label>
           <input
             type='text'
             className='w-full p-2 border rounded-md'
-            placeholder='Enter Country Name'
+            placeholder='Enter City/District/Division'
           />
         </div>
         <div className='mb-4'>
@@ -126,7 +126,7 @@ function Page() {
         <div className='col-span-2 mt-4'>
           <button
             type='submit'
-            className='bg-green-500 text-white px-4 py-2 rounded-md '
+            className='bg-green-600 hover:bg-secondary text-white px-4 py-2 rounded-md '
           >
             Submit
           </button>

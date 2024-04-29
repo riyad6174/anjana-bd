@@ -382,7 +382,16 @@ function Footer() {
           <div class='mt-8 border-t border-green-500 pt-8'>
             <div class='sm:flex sm:justify-between'>
               <p class='text-xs text-gray-500'>
-                &copy; 2022. Company Name. All rights reserved.
+                &copy; Copyright @2024 Anjaana Foundation All Right Reserved &
+                Development Partner{' '}
+                <a
+                  className='font-semibold'
+                  target='_blank'
+                  href='https://onvirtualworld.com/'
+                >
+                  {' '}
+                  “On Virtual World”
+                </a>
               </p>
 
               <ul class='mt-8 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end'>

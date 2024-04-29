@@ -36,7 +36,7 @@ function Hero({ projects }) {
             them, let&apos;s donate now to help fellow humans in need
           </p>
           <div className='flex flex-row items-left  sm:space-x-14'>
-            <button className='bg-green-600 rounded-md h-10 self-center py-1 px-6 md:h-14 md:px-10 justify-start  text-white text-xs'>
+            <button className='bg-green-600 hover:bg-secondary transition-colors delay-75 rounded-md h-10 self-center py-1 px-6 md:h-14 md:px-10 justify-start  text-white text-xs'>
               <Link href='/donate'>Donate Here</Link>
             </button>
             <button
@@ -61,7 +61,7 @@ function Hero({ projects }) {
                       height={300}
                       width={400}
                       alt='1'
-                      className='object-cover grayscale w-full h-full'
+                      className='object-cover transition ease-in-out delay-75 grayscale w-full h-full hover:grayscale-0 hover:scale-110'
                     />
                   </Link>
                 </div>

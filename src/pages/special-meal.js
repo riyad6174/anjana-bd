@@ -30,11 +30,11 @@ const MyForm = () => {
 
   return (
     <>
-      <div className=''>
+      <div className='pt-4'>
         <img
           src='./assets/hands.webp'
           alt='child'
-          className='h-64 w-full object-cover grayscale'
+          className='h-64 w-full object-cover grayscale '
         />
       </div>
       <div className='container pb-20'>
@@ -128,7 +128,7 @@ const MyForm = () => {
             <button
               type='button'
               onClick={handleAddMore}
-              className='bg-green-600 text-white px-4 py-2 text-sm uppercase'
+              className='bg-green-600 hover:bg-secondary text-white px-4 py-2 text-sm uppercase'
             >
               Add More
             </button>
@@ -195,7 +195,7 @@ const MyForm = () => {
             </div>
 
             <div className='text-center '>
-              <button class='text-center hover:shadow-form rounded-md bg-orange-400 py-3 px-8 text-base font-semibold text-white outline-none'>
+              <button class='text-center hover:shadow-form rounded-md bg-green-600 hover:bg-secondary py-3 px-8 text-base font-semibold text-white outline-none'>
                 Donate
               </button>
             </div>

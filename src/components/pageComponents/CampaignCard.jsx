@@ -38,7 +38,7 @@ function CampaignCard({ project }) {
 
             <Link
               href={`/campaign/${project?._id}`}
-              className=' text-center w-24 py-1  rounded-sm  font-thin bg-green-600 text-white'
+              className=' text-center w-24 py-1  rounded-sm  font-thin bg-green-600 hover:bg-secondary text-white'
             >
               Donate
             </Link>

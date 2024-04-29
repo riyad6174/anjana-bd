@@ -26,13 +26,13 @@ function Campaign({ campaigns }) {
                 key={campaign._id}
                 className='bg-white rounded-lg overflow-hidden shadow-lg'
               >
-                <div className='h-32 md:h-56 '>
+                <div className='h-32 md:h-56 md:p-3 overflow-hidden '>
                   <Image
                     src={`http://localhost:5000/img/${campaign?.image}`}
                     alt='Campaign 1'
                     height={400}
                     width={400}
-                    className='w-full h-full  md:p-3   object-cover'
+                    className='w-full h-full     object-cover hover:scale-105 transition-all delay-75'
                   />
                 </div>
                 <div className='p-6 pt-0'>
@@ -49,13 +49,13 @@ function Campaign({ campaigns }) {
                   <div className='flex flex-col md:flex-row align-middle justify-between '>
                     <Link
                       href={`/campaign/${campaign._id}`}
-                      className='bg-green-600 text-center rounded-md py-2 md:py-3 my-2 md:my-5 w-full md:w-24 text-white text-xs '
+                      className='bg-green-600 hover:bg-secondary text-center rounded-md py-2 md:py-3 my-2 md:my-5 w-full md:w-24 text-white text-xs '
                     >
                       Donate Now
                     </Link>
                     <Link
                       href={`/campaign/${campaign._id}`}
-                      className='text-green-600 self-center text-xs border py-1 md:py-3 px-5 rounded-md border-green-600'
+                      className='text-green-600 hover:border-secondary hover:text-secondary self-center text-xs border py-1 md:py-3 px-5 rounded-md border-green-600'
                     >
                       See Details
                     </Link>

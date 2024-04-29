@@ -15,8 +15,8 @@ function Mission() {
         <section class=' antialiased  text-gray-600  p-4 pt-10 md:pt-20'>
           <div class='flex flex-wrap gap-6'>
             {/* <!-- Card --> */}
-            <div class='max-w-xs mx-auto w-80'>
-              <div class='relative bg-green-700 shadow-lg rounded-lg  p-5 overflow-hidden'>
+            <div class='max-w-xs mx-auto w-80 group'>
+              <div class='relative bg-green-700 group-hover:bg-green-800 shadow-lg rounded-lg  p-5 overflow-hidden'>
                 {/* <!-- Illustration --> */}
                 <svg
                   class='absolute top-0 right-0'
@@ -97,7 +97,7 @@ function Mission() {
                   </g>
                 </svg>
                 {/* <!-- Card content --> */}
-                <div class='relative pt-[1rem] md:pt-[6rem] pb-2 md:pb-14  flex justify-center flex-col items-center'>
+                <div class='relative pt-[1rem] group-hover:rotate-6 transition-all ease-linear md:pt-[6rem] pb-2 md:pb-14  flex justify-center flex-col items-center'>
                   <ImSpoonKnife className='text-white text-2xl md:text-5xl ' />
                   <h3 class='text-xl md:text-4xl font-thin text-green-50 leading-snug mb-2 uppercase'>
                     Food
@@ -107,7 +107,7 @@ function Mission() {
               </div>
             </div>
             <div class='max-w-xs mx-auto w-80'>
-              <div class='relative bg-green-700 shadow-lg rounded-lg  p-5 overflow-hidden'>
+              <div class='relative bg-green-700 hover:bg-green-800 group shadow-lg rounded-lg  p-5 overflow-hidden'>
                 {/* <!-- Illustration --> */}
                 <svg
                   class='absolute top-0 right-0'
@@ -188,7 +188,7 @@ function Mission() {
                   </g>
                 </svg>
                 {/* <!-- Card content --> */}
-                <div class='relative pt-[1rem] md:pt-[6rem] md:pb-14   flex justify-center flex-col items-center'>
+                <div class='relative pt-[1rem] group-hover:rotate-6 transition-all ease-linear md:pt-[6rem] pb-2 md:pb-14  flex justify-center flex-col items-center'>
                   <RiGraduationCapFill className='text-white text-3xl md:text-5xl ' />
                   <h3 class='text-xl md:text-4xl font-thin text-green-50 leading-snug mb-2 uppercase'>
                     Education
@@ -198,7 +198,7 @@ function Mission() {
               </div>
             </div>
             <div class='max-w-xs mx-auto w-80'>
-              <div class='relative bg-green-700 shadow-lg rounded-lg  p-5 overflow-hidden'>
+              <div class='relative bg-green-700 hover:bg-green-800 group shadow-lg rounded-lg  p-5 overflow-hidden'>
                 {/* <!-- Illustration --> */}
                 <svg
                   class='absolute top-0 right-0'
@@ -279,7 +279,7 @@ function Mission() {
                   </g>
                 </svg>
                 {/* <!-- Card content --> */}
-                <div class='relative pt-[1rem] md:pt-[6rem] md:pb-14   flex justify-center flex-col items-center'>
+                <div class='relative pt-[1rem] group-hover:rotate-6 transition-all ease-linear md:pt-[6rem] pb-2 md:pb-14  flex justify-center flex-col items-center'>
                   <FaFirstAid className='text-white text-3xl md:text-5xl ' />
                   <h3 class='text-xl md:text-4xl font-thin text-green-50 leading-snug mb-2 uppercase'>
                     Treatment

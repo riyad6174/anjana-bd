@@ -57,7 +57,7 @@ const DonatePage = ({ amounts }) => {
 
   return (
     <div>
-      <div className=''>
+      <div className='pt-4'>
         <img
           src='./assets/child.jpg'
           alt='child'

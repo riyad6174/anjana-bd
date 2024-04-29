@@ -1,42 +1,88 @@
+import { login } from '@/utils/redux/authSlice';
 import Link from 'next/link';
-import React from 'react';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 function Page() {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const [formData, setFormData] = useState({
+    contact: '',
+    password: '',
+  });
+
+  const loginURL = 'http://localhost:5000/api/user-login';
+  // const loginURL = ' https://api.theanjanafoundation.org/api/user-login';
+
+  const [message, setMessage] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (formData.contact && formData.password !== '') {
+      try {
+        const response = await fetch(`${loginURL}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+        if (response.ok) {
+          // Handle successful submission
+          setMessage('Login Successful! Redirecting to Homepage...');
+          dispatch(login(response.data));
+
+          // Redirect to homepage after 2 seconds
+          setTimeout(() => {
+            router.push('/'); // Replace '/' with the homepage URL
+          }, 1000);
+        } else {
+          // Handle error response
+          console.error('Failed to submit form:', response.statusText);
+          setMessage('Login Failed! Please Try Again.');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error.message);
+      }
+    } else {
+      setMessage('Please Enter Credentials!');
+    }
+  };
   return (
     <>
       <div class='flex h-screen'>
-        <div class='hidden lg:flex items-center justify-center flex-1 bg-black text-black'>
-          <div class='max-w-md text-center'>
-            <img
-              className='grayscale'
-              src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-            />
-          </div>
-        </div>
-        <div class='w-full bg-gray-100 lg:w-1/2 flex items-center justify-center'>
+        <div class='w-full bg-indigo-50 lg:w-full flex items-center justify-center'>
           <div class='max-w-md w-full p-6'>
             <h1 class='text-3xl font-semibold mb-6 text-black text-center'>
               Sign In
             </h1>
-            <h1 class='text-sm font-semibold mb-6 text-gray-500 text-center'>
+            {/* <h1 class='text-sm font-semibold mb-6 text-gray-500 text-center'>
               Join to Our Community with all time access and free{' '}
-            </h1>
+            </h1> */}
 
             <div class='mt-4 text-sm text-gray-600 text-center'>
               <p>Login with Your Details</p>
             </div>
-            <form action='#' method='POST' class='space-y-4'>
+            <form onSubmit={handleSubmit} class='space-y-4'>
               <div>
                 <label
-                  for='email'
+                  for='contact'
                   class='block text-sm font-medium text-gray-700'
                 >
                   Email
                 </label>
                 <input
                   type='text'
-                  id='email'
-                  name='email'
+                  id='contact'
+                  value={formData.contact}
+                  onChange={handleChange}
+                  name='contact'
                   class='mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300'
                 />
               </div>
@@ -50,6 +96,8 @@ function Page() {
                 <input
                   type='password'
                   id='password'
+                  value={formData.password}
+                  onChange={handleChange}
                   name='password'
                   class='mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300'
                 />
@@ -71,6 +119,11 @@ function Page() {
                 </Link>
               </p>
             </div>
+            {message && (
+              <div className='text-center  text-gray-600 my-4 py-2 bg-indigo-200'>
+                <p>{message}</p>
+              </div>
+            )}
           </div>
         </div>
       </div>

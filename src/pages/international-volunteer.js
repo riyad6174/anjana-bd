@@ -6,7 +6,7 @@ import React from 'react';
 
 function Page() {
   return (
-    <div>
+    <div className='pt-4'>
       <div className=''>
         <img
           src='./assets/volunteer4.jpg'
@@ -189,7 +189,7 @@ function Page() {
         <div className='col-span-2 mt-4'>
           <button
             type='submit'
-            className='bg-green-500 text-white px-4 py-2 rounded-md '
+            className='bg-green-600 hover:bg-secondary text-white px-4 py-2 rounded-md '
           >
             Submit
           </button>

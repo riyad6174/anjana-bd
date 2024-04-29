@@ -8,6 +8,9 @@ module.exports = {
   theme: {
     container: { center: true },
     extend: {
+      colors: {
+        secondary: '#f9b629',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

@@ -56,7 +56,7 @@ const DonatePage = ({ sponsor }) => {
   };
 
   return (
-    <div className='mb-10'>
+    <div className='mb-10 pt-4'>
       <div>
         <img
           src='/assets/child.jpg'
@@ -171,7 +171,7 @@ const DonatePage = ({ sponsor }) => {
                   </div>
                 </div>
               </div>
-              <button class='text-center hover:shadow-form rounded-md bg-orange-400 py-3 px-8 text-base font-semibold text-white outline-none'>
+              <button class='text-center hover:shadow-form rounded-md bg-green-600 hover:bg-secondary py-3 px-8 text-base font-semibold text-white outline-none'>
                 Donate
               </button>
             </div>
