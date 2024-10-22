@@ -16,13 +16,13 @@ function Contact() {
           <BsFillTelephoneFill fill='white' size={10} />
         </div>
         <div>
-          <p className='hidden sm:block'>+123-456-7890</p>
+          <p className='hidden sm:block'>+8801914075757</p>
         </div>
         <div className='ml-4 sm:ml-7 mr-2'>
           <FaEnvelope fill='white' size={12} />
         </div>
         <div className='hidden sm:block'>
-          <p>info@donaty.com</p>
+          <p>niloy0929@gmail.com</p>
         </div>
       </div>
       <div className='flex items-center'>

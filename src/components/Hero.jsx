@@ -23,21 +23,22 @@ function Hero({ projects }) {
             TRUSTED CHARITY COMPANY
           </p>
           <h1 className='font-bold  text-xl md:text-4xl lg:text-5xl leading-snug mb-2'>
-            <span className='text-black'>Let&apos;s Help And Make</span>
+            <span className='text-black'> Be the Light</span>
             <br />
             <span className='text-black'>
-              People Smile By <span className='text-green-600'>Giving</span>
+              in Someone’s Darkest <br />
+              <span className='text-green-600'>Hour</span>
             </span>
             <br />
-            <span className='text-black'>Of Yours</span>
           </h1>
-          <p className='text-gray-400 leading-2 text-sm mb-4 md:text-lg w-1/2'>
-            No matter how small the donation you give, It will mean a lot to
-            them, let&apos;s donate now to help fellow humans in need
+          <p className='text-gray-400 leading-2 text-sm mb-4 md:text-lg '>
+            Support our mission to uplift underprivileged communities by
+            providing access to clean water, healthcare, and education. Every
+            contribution brings hope and a chance for a better life.
           </p>
           <div className='flex flex-row items-left  sm:space-x-14'>
             <button className='bg-green-600 hover:bg-secondary transition-colors delay-75 rounded-md h-10 self-center py-1 px-6 md:h-14 md:px-10 justify-start  text-white text-xs'>
-              <Link href='/donate'>Donate Here</Link>
+              <Link href='/contact-us'>Donate Here</Link>
             </button>
             <button
               onClick={() => setshowPopup(!showPopup)}

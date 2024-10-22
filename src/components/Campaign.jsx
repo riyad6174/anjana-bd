@@ -17,6 +17,16 @@ function Campaign({ campaigns }) {
             Giving Help To Those Who Need It
           </h2>
         </div>
+        <div className='py-4  text-center px-10 md:px-44 text-gray-500'>
+          <p>
+            {' '}
+            <p>
+              We work towards eradicating poverty by empowering families with
+              sustainable solutions that improve their livelihoods and overall
+              well-being.
+            </p>
+          </p>
+        </div>
 
         <div className='grid grid-cols-2 md:pt-10 md:grid-cols-3 gap-3 md:gap-20 h-full'>
           {/* Card 1 */}

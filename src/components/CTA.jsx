@@ -11,9 +11,9 @@ function CTA() {
             <span class='block text-green-600'>It&#x27;s today or never.</span>
           </h2>
           <p class='text-lg mt-4 text-gray-400'>
-            Join us and make your life more valuable and useful, be a part of us
-            and contribute to the nation and state and the simplest for the
-            environment and yourself
+            Join us at Charity and help create positive change. Whether you
+            donate, volunteer, or spread awareness, your efforts will empower
+            those in need and foster hope in our communities.
           </p>
           <div class='lg:mt-0 lg:flex-shrink-0'>
             <div class='mt-12 inline-flex rounded-md shadow'>

@@ -9,10 +9,20 @@ function JoinUs() {
           Join Us
         </p>
       </span>
+      <div className='py-4  text-center px-10 md:px-44 text-gray-500'>
+        <p>
+          {' '}
+          <p>
+            Be part of our mission to make a positive impact. By joining us, you
+            contribute to improving lives, fostering growth, and bringing smiles
+            to those facing hardship.
+          </p>
+        </p>
+      </div>
       <section class='text-gray-700 body-font'>
         <div class='container px-5 py-10 md:py-16 mx-auto'>
           <div class='flex flex-wrap -m-4 text-center justify-center'>
-            <Link href='/donate' class='p-4 md:w-1/4 sm:w-1/2 w-full'>
+            <Link href='/contact-us' class='p-4 md:w-1/4 sm:w-1/2 w-full'>
               <div class='border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'

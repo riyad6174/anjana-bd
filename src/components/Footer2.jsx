@@ -14,8 +14,10 @@ export const Footer2 = () => {
               </h2>
 
               <p class='mt-4 text-gray-500'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                non cupiditate quae nam molestias.
+                Be the first to know! Sign up for Charity&apos;s newsletter to
+                receive exclusive news, event announcements, and inspiring
+                stories that showcase the power of community and compassion in
+                action.
               </p>
             </div>
           </div>
@@ -69,15 +71,14 @@ export const Footer2 = () => {
             </Link>
             <div className='mt-6 lg:max-w-sm'>
               <p className='text-sm text-gray-800'>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
+                Anjana Foundation is dedicated to uplifting marginalized
+                communities through education, healthcare, and social
+                empowerment initiatives, fostering a brighter future for all.
+                Join us in making a significant impact today.
               </p>
-              <p className='mt-4 text-sm text-gray-800'>
-                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo.
-              </p>
+
               <Link
-                href={'/donate'}
+                href={'/contact-us'}
                 className='bg-green-600 hover:bg-secondary flex gap-2 px-4 py-2 my-4 rounded-md w-1/2 justify-center items-center text-white'
               >
                 <FaHeart size={16} className='ml-2' />
@@ -90,6 +91,32 @@ export const Footer2 = () => {
               Quick Links
             </p>
             <ul class='mt-6 space-y-4 text-sm'>
+              <li>
+                <Link
+                  href='/about-us'
+                  class='text-gray-700 transition hover:opacity-75'
+                >
+                  {' '}
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/contact-us'
+                  class='text-gray-700 transition hover:opacity-75'
+                >
+                  {' '}
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href='/faq'
+                  className='text-gray-700 transition hover:opacity-75'
+                >
+                  FAQ
+                </Link>
+              </li>
               <li>
                 <Link
                   href='/audit-report'
@@ -133,7 +160,7 @@ export const Footer2 = () => {
                 title='Our phone'
                 className='transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800'
               >
-                850-123-5021
+                +8801914075757
               </a>
             </div>
             <div className='flex'>
@@ -144,7 +171,7 @@ export const Footer2 = () => {
                 title='Our email'
                 className='transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800'
               >
-                info@lorem.mail
+                niloy0929@gmail.com
               </a>
             </div>
             <div className='flex'>
@@ -157,7 +184,7 @@ export const Footer2 = () => {
                 title='Our address'
                 className='transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800'
               >
-                312 Lovely Street, NY
+                Vill-Ruprampur, Post:Thukra, P.S:Dumuria, Dist:Khulna
               </a>
             </div>
             <div className='flex items-center mt-4 space-x-3 '>

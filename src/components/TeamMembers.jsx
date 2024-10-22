@@ -98,9 +98,11 @@ function TeamMembers() {
           </span>{' '}
           our talented team of professionals
         </h2>
+
         <p className='text-base text-gray-700 md:text-lg'>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque rem aperiam, eaque ipsa quae.
+          Meet the passionate individuals behind Charity. Our team of experts is
+          driven by a shared mission to empower communities, promote
+          sustainability, and advocate for those who need it most.
         </p>
       </div>
       <div className='slider-container white-slider-bg'>

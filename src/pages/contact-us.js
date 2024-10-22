@@ -1,6 +1,3 @@
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 import React from 'react';
 
 function Page() {
@@ -76,7 +73,7 @@ function Page() {
                       class='hover:text-gray-900'
                       href='mailto:contact@yourcompany.com'
                     >
-                      contact@yourcompany.com
+                      niloy0929@gmail.com
                     </a>
                   </dd>
                 </div>
@@ -99,7 +96,9 @@ function Page() {
                       ></path>
                     </svg>
                   </dt>
-                  <dd>123 Main Street, Cityville, Country</dd>
+                  <dd>
+                    Vill-Ruprampur, Post:Thukra, P.S:Dumuria, Dist:Khulnas
+                  </dd>
                 </div>
               </dl>
             </div>

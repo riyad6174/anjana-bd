@@ -12,6 +12,16 @@ function Mission() {
             Our Mission
           </p>
         </span>
+        <div className='py-4  text-center px-10 md:px-44 text-gray-500'>
+          <p>
+            {' '}
+            <p>
+              Supporting the most disadvantaged members of society, especially
+              homeless and orphaned children, through education, proper
+              nutrition, and safe shelter, to foster growth and independence.
+            </p>
+          </p>
+        </div>
         <section class=' antialiased  text-gray-600  p-4 pt-10 md:pt-20'>
           <div class='flex flex-wrap gap-6'>
             {/* <!-- Card --> */}

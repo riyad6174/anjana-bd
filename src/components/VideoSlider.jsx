@@ -102,6 +102,17 @@ function VideoSlider() {
           </span>{' '}
         </h2>
       </div>
+      <div className='py-4  text-center px-10 md:px-44 text-gray-500'>
+        <p>
+          {' '}
+          <p>
+            Watch our event videos to see firsthand the incredible moments
+            captured during our fundraising efforts. Together, we create lasting
+            change and build a brighter future for those in need.
+          </p>
+        </p>
+      </div>
+
       <div className='slider-container white-slider-bg'>
         <Slider {...settings}>
           {/* <div class='flex flex-wrap justify-center mt-10'> */}

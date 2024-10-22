@@ -17,6 +17,16 @@ function Projects({ projects }) {
             </h2>
           </div>
         </div>
+        <div className='py-4  text-center px-10 md:px-44 text-gray-500'>
+          <p>
+            {' '}
+            <p>
+              Charity responds to natural disasters and humanitarian crises by
+              providing immediate relief supplies such as food, water, and
+              shelter to affected communities worldwide.
+            </p>
+          </p>
+        </div>
         <div className='container px-0 md:px-10'>
           <div className='p-2 pt-10    lg:px-24 grid grid-cols-2 gap-y-2 gap-x-2 md:grid-cols-3 items-center justify-center'>
             {projects.slice(0, 3)?.map((project) => {

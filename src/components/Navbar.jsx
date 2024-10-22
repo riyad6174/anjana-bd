@@ -35,7 +35,7 @@ function Navbar() {
       className={`${
         scrollY > 20
           ? 'bg-green-600 text-primary-color opacity-100 w-full transition-all ease-in delay-100 fixed top-0 z-10  h-16 flex items-center justify-between p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10  px-8 sm:px-10 md:px-16 lg:px-32 xl:px-40'
-          : 'bg-transparent w-full fixed top-10 transition-all ease-in delay-200  z-10  h-16 flex items-center justify-between p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10  px-8 sm:px-10 md:px-16 lg:px-32 xl:px-40 shadow-md'
+          : 'bg-white w-full fixed top-10 transition-all ease-in delay-200  z-10  h-16 flex items-center justify-between p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10  px-8 sm:px-10 md:px-16 lg:px-32 xl:px-40 shadow-md'
       }`}
     >
       <Link href='/' className='flex items-center'>
@@ -100,7 +100,7 @@ function Navbar() {
           )}
           <li>
             <Link
-              href='/donate'
+              href='/contact-us'
               className={`text-xs font-bold py-2 px-3 md:py-3 md:px-4 lg:py-4 lg:px-5 rounded-md flex items-center ${
                 scrollY > 20
                   ? 'border border-white text-white '
