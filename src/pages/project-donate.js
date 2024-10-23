@@ -61,12 +61,12 @@ const DonatePage = () => {
       <div className='grid grid-cols-4 px-10 pt-10 gap-x-6'>
         <div className='border-r-2 flex flex-col'>
           <img src='https://placehold.co/600x400' alt='project' />
-          <p className='pr-2'>
+          {/* <p className='pr-2'>
             What is Lorem Ipsum? Lorem Ipsum is just dummy text used in the
             printing and typesetting industries. Since the 1500s, when an
             unknown printer scrambled a galley of type to make a type specimen
             book, Lorem Ipsum has been the industryas standard dummy text
-          </p>
+          </p> */}
         </div>
         <div className='col-span-3'>
           <span className='text-3xl text-green-600 uppercase'>Donate Here</span>

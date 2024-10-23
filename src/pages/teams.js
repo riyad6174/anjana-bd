@@ -44,10 +44,10 @@ const Page = () => {
           </span>{' '}
           our talented team of professionals
         </h2>
-        <p className='text-base text-gray-700 md:text-lg'>
+        {/* <p className='text-base text-gray-700 md:text-lg'>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque rem aperiam, eaque ipsa quae.
-        </p>
+        </p> */}
       </div>
       <ul
         className='flex flex-wrap  list-none  w-1/3 mb-6  mx-auto bg-green-100'

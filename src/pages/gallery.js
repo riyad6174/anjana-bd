@@ -1,6 +1,3 @@
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 import React, { useState } from 'react';
 
 const GalleryPage = () => {
@@ -9,6 +6,38 @@ const GalleryPage = () => {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+
+  // Array of images
+  const images = [
+    {
+      src: './assets/gallary/Image1.jpg',
+      alt: 'Mountain view',
+    },
+    {
+      src: './assets/gallary/Image2.jpg',
+      alt: 'Forest and road',
+    },
+    {
+      src: './assets/gallary/Image3.jpg',
+      alt: 'River and sunset',
+    },
+    {
+      src: './assets/gallary/Image4.jpg',
+      alt: 'Urban nightscape',
+    },
+    {
+      src: './assets/gallary/Image5.jpg',
+      alt: 'Abstract art',
+    },
+    {
+      src: './assets/gallary/Image6.jpg',
+      alt: 'Beach and ocean',
+    },
+    {
+      src: './assets/gallary/Image7.jpg',
+      alt: 'Beach and ocean',
+    },
+  ];
 
   return (
     <>
@@ -75,61 +104,27 @@ const GalleryPage = () => {
             }`}
             role='tabpanel'
           >
-            {/* App Tab Content */}
-            {/* ... */}
+            {/* Dynamic Images */}
             <div className='grid w-full grid-cols-3 gap-4 p-4 font-sans text-base antialiased font-light leading-relaxed text-gray-700 h-max'>
-              <div>
-                <img
-                  class='w-full h-64 object-cover max-w-full rounded-lg'
-                  src='https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2940&amp;q=80'
-                  alt='image-photo'
-                />
-              </div>
-              <div>
-                <img
-                  class='w-full h-64 object-cover max-w-full rounded-lg'
-                  src='https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2762&amp;q=80'
-                  alt='image-photo'
-                />
-              </div>
-              <div>
-                <img
-                  class='w-full h-64 object-cover max-w-full rounded-lg'
-                  src='https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2832&amp;q=80'
-                  alt='image-photo'
-                />
-              </div>
-              <div>
-                <img
-                  class='w-full h-64 object-cover max-w-full rounded-lg'
-                  src='https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog5.jpg'
-                  alt='image-photo'
-                />
-              </div>
-              <div>
-                <img
-                  class='w-full h-64 object-cover max-w-full rounded-lg'
-                  src='https://material-taillwind-pro-ct-tailwind-team.vercel.app/img/content2.jpg'
-                  alt='image-photo'
-                />
-              </div>
-              <div>
-                <img
-                  class='w-full h-64 object-cover max-w-full rounded-lg'
-                  src='https://images.unsplash.com/photo-1620064916958-605375619af8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1493&amp;q=80'
-                  alt='image-photo'
-                />
-              </div>
+              {images.map((image, index) => (
+                <div key={index}>
+                  <img
+                    className='w-full h-64 object-cover max-w-full rounded-lg'
+                    src={image.src}
+                    alt={image.alt}
+                  />
+                </div>
+              ))}
             </div>
           </div>
+
           <div
             className={`block ${
               activeTab === 'message' ? 'opacity-100' : 'hidden opacity-0'
             }`}
             role='tabpanel'
           >
-            {/* Messages Tab Content */}
-            {/* ... */}
+            {/* Winter Event Content */}
           </div>
           <div
             className={`block ${
@@ -137,8 +132,7 @@ const GalleryPage = () => {
             }`}
             role='tabpanel'
           >
-            {/* Settings Tab Content */}
-            {/* ... */}
+            {/* New Year Event Content */}
           </div>
         </div>
       </div>

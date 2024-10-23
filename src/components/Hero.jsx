@@ -37,9 +37,11 @@ function Hero({ projects }) {
             contribution brings hope and a chance for a better life.
           </p>
           <div className='flex flex-row items-left  sm:space-x-14'>
-            <button className='bg-green-600 hover:bg-secondary transition-colors delay-75 rounded-md h-10 self-center py-1 px-6 md:h-14 md:px-10 justify-start  text-white text-xs'>
-              <Link href='/contact-us'>Donate Here</Link>
-            </button>
+            <Link href={'/contact-us'}>
+              <button className='bg-green-600 hover:bg-secondary transition-colors delay-75 rounded-md h-10 self-center py-1 px-6 md:h-14 md:px-10 justify-start  text-white text-xs'>
+                Donate Here
+              </button>
+            </Link>
             <button
               onClick={() => setshowPopup(!showPopup)}
               className='inline ml-10'
