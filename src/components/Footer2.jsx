@@ -184,7 +184,7 @@ export const Footer2 = () => {
                 title='Our address'
                 className='transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800'
               >
-                Vill-Ruprampur, Post:Thukra, P.S:Dumuria, Dist:Khulna
+                Ruprampur,Thukra,Dumuria,Khulna
               </a>
             </div>
             <div className='flex items-center mt-4 space-x-3 '>

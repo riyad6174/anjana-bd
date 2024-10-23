@@ -96,9 +96,7 @@ function Page() {
                       ></path>
                     </svg>
                   </dt>
-                  <dd>
-                    Vill-Ruprampur, Post:Thukra, P.S:Dumuria, Dist:Khulnas
-                  </dd>
+                  <dd>Ruprampur, Thukra, Dumuria, Khulna</dd>
                 </div>
               </dl>
             </div>

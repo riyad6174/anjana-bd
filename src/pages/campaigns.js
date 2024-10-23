@@ -6,7 +6,7 @@ function Page({ campaign }) {
   console.log(campaign);
   return (
     <div>
-      <div>
+      <div className='mt-32'>
         <span className='flex justify-center uppercase text-xl text-green-600 font-semibold'>
           Our campaigns
         </span>
