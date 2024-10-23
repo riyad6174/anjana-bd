@@ -27,7 +27,7 @@ function CTA() {
           </div>
         </div>
         <img
-          src='./assets/onjona-logo.png'
+          src='./assets/anjana-logo.png'
           class='absolute top-0 right-10  hidden h-full max-w-1/2 lg:block'
         />
       </div>

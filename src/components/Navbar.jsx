@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
 import { MdOutlineKeyboardArrowDown, MdMenu, MdClose } from 'react-icons/md';
-import logo from '../../public/assets/onjona-logo.png';
+import logo from '../../public/assets/anjana-logo.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
