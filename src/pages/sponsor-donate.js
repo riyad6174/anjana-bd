@@ -38,7 +38,7 @@ const SelectableField = ({
   );
 };
 
-const DonatePage = () => {
+const Page = () => {
   const mockData = ['12000', '24000', '40000', '100000'];
   const [selectedOption, setSelectedOption] = useState(mockData[0]);
   const [inputValue, setInputValue] = useState('');
@@ -128,4 +128,4 @@ const DonatePage = () => {
   );
 };
 
-export default DonatePage;
+export default Page;
