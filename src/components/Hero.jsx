@@ -89,11 +89,11 @@ function Hero({ projects }) {
               class='relative w-1/2 md:w-1/2 h-32 md:h-48 mb-4 sm:mb-0  border overflow-hidden'
             >
               <img
-                src='./assets/old2.jpg'
+                src='./assets/project.jpg'
                 alt='1'
-                className='object-cover grayscale w-full h-full'
+                className='object-cover  w-full h-full'
               />
-              <div className='absolute flex justify-center items-center top-0 left-0 bg-black w-full h-full opacity-70 hover:opacity-80'>
+              <div className='absolute flex justify-center items-center top-0 left-0 bg-black w-full h-full opacity-50 hover:opacity-60'>
                 <button className='flex justify-center items-center text-white'>
                   <BsPlus className='text-4xl ' />
                   <span className='text-xl font-semibold'>
