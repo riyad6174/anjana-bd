@@ -71,7 +71,7 @@ function VideoSlider() {
     //     </div>
     //   </Slider>
     // </div>
-    <div className='px-4  py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
+    <div className='px-4  py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 overflow-hidden'>
       <div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
         <div></div>
         <h2 className='max-w-lg mb-6 font-sans text-xl uppercase font-normal  text-green-600 sm:text-md md:mx-auto'>

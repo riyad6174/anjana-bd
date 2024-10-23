@@ -44,7 +44,7 @@ function Navbar() {
           height={400}
           src={logo}
           alt='Logo'
-          className='w-20 h-20 md:w-20 md:h-20  mr-2'
+          className='w-16 h-16 md:w-18 md:h-18  mr-2'
         />
         {/* <p className='text-black font-semibold text-sm'>Donaty</p> */}
       </Link>

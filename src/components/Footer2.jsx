@@ -5,15 +5,14 @@ import { FaHeart } from 'react-icons/fa';
 export const Footer2 = () => {
   return (
     <div className='bg-green-200'>
-      <div className='px-4 pt-16  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
-        <div className='grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4'>
-          <div class='col-span-2'>
+      <div className='px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+        <div className='grid gap-10 row-gap-6 mb-8 grid-cols-2 lg:grid-cols-4'>
+          <div className='col-span-2'>
             <div>
-              <h2 class='text-2xl font-bold text-gray-900'>
+              <h2 className='text-2xl font-bold text-gray-900'>
                 Get the latest news!
               </h2>
-
-              <p class='mt-4 text-gray-500'>
+              <p className='mt-4 text-gray-500'>
                 Be the first to know! Sign up for Charity&apos;s newsletter to
                 receive exclusive news, event announcements, and inspiring
                 stories that showcase the power of community and compassion in
@@ -22,50 +21,34 @@ export const Footer2 = () => {
             </div>
           </div>
 
-          <div class='col-span-2 lg:col-span-2 lg:flex lg:items-end'>
-            <form class='w-full'>
-              <label for='UserEmail' class='sr-only'>
-                {' '}
-                Email{' '}
+          <div className='col-span-2 lg:col-span-2 lg:flex lg:items-end'>
+            <form className='w-full'>
+              <label htmlFor='UserEmail' className='sr-only'>
+                Email
               </label>
-
-              <div class='border border-gray-100 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4'>
+              <div className='border border-gray-100 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4'>
                 <input
                   type='email'
                   id='UserEmail'
-                  placeholder='john@rhcp.com'
-                  class='w-full border-none py-3 px-4 focus:border-transparent focus:ring-transparent sm:text-sm'
+                  placeholder='youremail@mail.com'
+                  className='w-full border-none py-3 px-4 focus:border-transparent focus:ring-transparent sm:text-sm'
                 />
-
-                <button class='mt-1 w-full bg-green-600 hover:bg-secondary px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none  sm:mt-0 sm:w-auto sm:shrink-0'>
+                <button className='mt-1 w-full bg-green-600 hover:bg-secondary px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none sm:mt-0 sm:w-auto sm:shrink-0'>
                   Send
                 </button>
               </div>
             </form>
           </div>
-          <div className='sm:col-span-2'>
+
+          {/* Organization Info Section */}
+          <div className='col-span-2  md:col-span-2 flex flex-col mb-6'>
             <Link
               href='/'
               aria-label='Go home'
               title='Company'
               className='inline-flex items-center'
             >
-              {/* <svg
-                className='w-8 text-deep-purple-accent-400'
-                viewBox='0 0 24 24'
-                strokeLinejoin='round'
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeMiterlimit='10'
-                stroke='currentColor'
-                fill='none'
-              >
-                <rect x='3' y='1' width='7' height='12' />
-                <rect x='3' y='17' width='7' height='6' />
-                <rect x='14' y='1' width='7' height='6' />
-                <rect x='14' y='11' width='7' height='12' />
-              </svg> */}
-              <span className=' text-xl font-bold tracking-wide text-gray-800 uppercase'>
+              <span className='text-xl font-bold tracking-wide text-gray-800 uppercase'>
                 Anjana Foundation
               </span>
             </Link>
@@ -76,7 +59,6 @@ export const Footer2 = () => {
                 empowerment initiatives, fostering a brighter future for all.
                 Join us in making a significant impact today.
               </p>
-
               <Link
                 href={'/contact-us'}
                 className='bg-green-600 hover:bg-secondary flex gap-2 px-4 py-2 my-4 rounded-md w-1/2 justify-center items-center text-white'
@@ -86,26 +68,26 @@ export const Footer2 = () => {
               </Link>
             </div>
           </div>
-          <div className='space-y-2 text-sm'>
+
+          {/* Quick Links Section */}
+          <div className='flex col-span-2  md:col-span-1 flex-col mb-6'>
             <p className='text-base font-bold tracking-wide text-gray-900 uppercase'>
               Quick Links
             </p>
-            <ul class='mt-6 space-y-4 text-sm'>
+            <ul className='mt-6 space-y-4 text-sm'>
               <li>
                 <Link
                   href='/about-us'
-                  class='text-gray-700 transition hover:opacity-75'
+                  className='text-gray-700 transition hover:opacity-75'
                 >
-                  {' '}
                   About Us
                 </Link>
               </li>
               <li>
                 <Link
                   href='/contact-us'
-                  class='text-gray-700 transition hover:opacity-75'
+                  className='text-gray-700 transition hover:opacity-75'
                 >
-                  {' '}
                   Contact Us
                 </Link>
               </li>
@@ -120,35 +102,32 @@ export const Footer2 = () => {
               <li>
                 <Link
                   href='/audit-report'
-                  class='text-gray-700 transition hover:opacity-75'
+                  className='text-gray-700 transition hover:opacity-75'
                 >
-                  {' '}
-                  Audit Reports{' '}
+                  Audit Reports
                 </Link>
               </li>
-
               <li>
                 <Link
                   href='/teams'
-                  class='text-gray-700 transition hover:opacity-75'
+                  className='text-gray-700 transition hover:opacity-75'
                 >
-                  {' '}
-                  Meet the Team{' '}
+                  Meet the Team
                 </Link>
               </li>
-
               <li>
                 <Link
                   href='/gallery'
-                  class='text-gray-700 transition hover:opacity-75'
+                  className='text-gray-700 transition hover:opacity-75'
                 >
-                  {' '}
-                  Gallery{' '}
+                  Gallery
                 </Link>
               </li>
             </ul>
           </div>
-          <div>
+
+          {/* Contact Info Section */}
+          <div className='flex col-span-2 md:col-span-1 flex-col mb-6'>
             <span className='text-base font-bold tracking-wide text-gray-900 uppercase'>
               Contact
             </span>
@@ -166,7 +145,7 @@ export const Footer2 = () => {
             <div className='flex'>
               <p className='mr-1 text-gray-800'>Email:</p>
               <a
-                href='niloy0929@gmail.com'
+                href='mailto:niloy0929@gmail.com'
                 aria-label='Our email'
                 title='Our email'
                 className='transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800'
@@ -184,10 +163,10 @@ export const Footer2 = () => {
                 title='Our address'
                 className='transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800'
               >
-                Ruprampur,Thukra,Dumuria,Khulna
+                Ruprampur, Thukra, Dumuria, Khulna
               </a>
             </div>
-            <div className='flex items-center mt-4 space-x-3 '>
+            <div className='flex items-center mt-4 space-x-3'>
               <Link
                 href='/'
                 className='text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400'
@@ -202,60 +181,21 @@ export const Footer2 = () => {
               >
                 <svg viewBox='0 0 30 30' fill='currentColor' className='h-6'>
                   <circle cx='15' cy='15' r='4' />
-                  <path d='M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z' />
-                </svg>
-              </Link>
-              <Link
-                href='/'
-                className='text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400'
-              >
-                <svg viewBox='0 0 24 24' fill='currentColor' className='h-5'>
-                  <path d='M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z' />
+                  <path d='M19.999,3h-10C6.14,3,3,6.141,3,10v10c0,3.859,3.14,7,7.999,7h10c4.859,0,8.001-3.141,8.001-7V10 C28,6.141,24.857,3,19.999,3z M15,18c-4.41,0-8-3.589-8-8c0-4.411,3.589-8,8-8s8,3.589,8,8C23,14.411,19.411,18,15,18z' />
                 </svg>
               </Link>
             </div>
           </div>
         </div>
-        <div className='flex flex-col-reverse justify-between pt-5 pb-10 border-t border-green-300 lg:flex-row'>
-          <p class='text-xs text-gray-500'>
-            &copy; Copyright @2024 Anjaana Foundation All Right Reserved &
-            Development Partner{' '}
-            <a
-              className='font-semibold'
-              target='_blank'
-              href='https://onvirtualworld.com/'
-            >
-              {' '}
-              “On Virtual World”
-            </a>
-          </p>
 
-          <ul className='flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row'>
-            <li>
-              <Link
-                href='/faq'
-                className='text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400'
-              >
-                FAQ
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='/bank-details'
-                className='text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400'
-              >
-                Bank Details
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='/'
-                className='text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400'
-              >
-                Terms &amp; Conditions
-              </Link>
-            </li>
-          </ul>
+        <div className='flex justify-center items-center py-5'>
+          <p className='text-sm text-gray-500'>
+            © Copyright 2024 Anjana Foundation. All Rights Reserved.{' '}
+            <span className='text-gray-600'>
+              Crafted with <BsHeartFill className='inline text-red-500' /> by
+              Niloy
+            </span>
+          </p>
         </div>
       </div>
     </div>
