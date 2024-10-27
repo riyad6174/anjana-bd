@@ -1,6 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Page() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
+  });
+  const [errors, setErrors] = useState({});
+
+  // Handle input change
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Validate form fields
+  const validate = () => {
+    let tempErrors = {};
+    if (!formData.firstName.trim())
+      tempErrors.firstName = 'First name is required';
+    if (!formData.lastName.trim())
+      tempErrors.lastName = 'Last name is required';
+    if (!formData.email.trim()) {
+      tempErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      tempErrors.email = 'Email is invalid';
+    }
+    if (!formData.message.trim()) tempErrors.message = 'Message is required';
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).length === 0;
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevents the default form submission behavior
+
+    if (validate()) {
+      // Checks if all form validations pass
+      const { firstName, lastName, email, message } = formData;
+      // Create a mailto link with the form data
+      const mailtoLink = `mailto:niloy0929@gmail.com?subject=Contact Form Submission&body=Name: ${firstName} ${lastName}%0AEmail: ${email}%0AMessage: ${message}`;
+      window.location.href = mailtoLink; // Redirects to the mailto link
+    }
+  };
+
   return (
     <div>
       <div class='relative isolate bg-white '>
@@ -101,81 +147,101 @@ function Page() {
               </dl>
             </div>
           </div>
-          <form class='px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-32'>
-            <div class='mx-auto max-w-xl lg:mr-0 lg:max-w-lg'>
-              <div class='grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2'>
+          <form
+            onSubmit={handleSubmit}
+            className='px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-32'
+          >
+            <div className='mx-auto max-w-xl lg:mr-0 lg:max-w-lg'>
+              <div className='grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2'>
                 <div>
                   <label
-                    for='first-name'
-                    class='block text-sm font-semibold leading-6 text-gray-900'
+                    htmlFor='first-name'
+                    className='block text-sm font-semibold leading-6 text-gray-900'
                   >
                     First name
                   </label>
-                  <div class='mt-2.5'>
+                  <div className='mt-2.5'>
                     <input
                       type='text'
                       id='first-name'
-                      autocomplete='given-name'
-                      class='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                       name='firstName'
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                     />
+                    {errors.firstName && (
+                      <p className='text-red-500 text-sm'>{errors.firstName}</p>
+                    )}
                   </div>
                 </div>
                 <div>
                   <label
-                    for='last-name'
-                    class='block text-sm font-semibold leading-6 text-gray-900'
+                    htmlFor='last-name'
+                    className='block text-sm font-semibold leading-6 text-gray-900'
                   >
                     Last name
                   </label>
-                  <div class='mt-2.5'>
+                  <div className='mt-2.5'>
                     <input
                       type='text'
                       id='last-name'
-                      autocomplete='family-name'
-                      class='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                       name='lastName'
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                     />
+                    {errors.lastName && (
+                      <p className='text-red-500 text-sm'>{errors.lastName}</p>
+                    )}
                   </div>
                 </div>
-                <div class='sm:col-span-2'>
+                <div className='sm:col-span-2'>
                   <label
-                    for='email'
-                    class='block text-sm font-semibold leading-6 text-gray-900'
+                    htmlFor='email'
+                    className='block text-sm font-semibold leading-6 text-gray-900'
                   >
                     Email
                   </label>
-                  <div class='mt-2.5'>
+                  <div className='mt-2.5'>
                     <input
                       type='email'
                       id='email'
-                      autocomplete='email'
-                      class='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                       name='email'
+                      value={formData.email}
+                      onChange={handleChange}
+                      className='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                     />
+                    {errors.email && (
+                      <p className='text-red-500 text-sm'>{errors.email}</p>
+                    )}
                   </div>
                 </div>
-                <div class='sm:col-span-2'>
+                <div className='sm:col-span-2'>
                   <label
-                    for='message'
-                    class='block text-sm font-semibold leading-6 text-gray-900'
+                    htmlFor='message'
+                    className='block text-sm font-semibold leading-6 text-gray-900'
                   >
                     Message
                   </label>
-                  <div class='mt-2.5'>
+                  <div className='mt-2.5'>
                     <textarea
                       id='message'
-                      rows='4'
-                      class='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                       name='message'
+                      rows='4'
+                      value={formData.message}
+                      onChange={handleChange}
+                      className='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                     ></textarea>
+                    {errors.message && (
+                      <p className='text-red-500 text-sm'>{errors.message}</p>
+                    )}
                   </div>
                 </div>
               </div>
-              <div class='mt-8 flex justify-end'>
+              <div className='mt-8 flex justify-end'>
                 <button
                   type='submit'
-                  class='w-max  rounded-2xl  bg-green-600  px-5 py-1.5 text-sm font-semibold text-white transition-colors duration-150 ease-in-out  hover:bg-green-700'
+                  className='w-max rounded-2xl bg-green-600 px-5 py-1.5 text-sm font-semibold text-white transition-colors duration-150 ease-in-out hover:bg-green-700'
                 >
                   Send message
                 </button>
