@@ -22,7 +22,7 @@ function Contact() {
           <FaEnvelope fill='white' size={12} />
         </div>
         <div className='hidden sm:block'>
-          <p>niloy0929@gmail.com</p>
+          <a href='mailto:niloy0929@gmail.com'>niloy0929@gmail.com</a>
         </div>
       </div>
       <div className='flex items-center'>

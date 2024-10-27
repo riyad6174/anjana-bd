@@ -1,8 +1,15 @@
 import Link from 'next/link';
+import { useState } from 'react';
 import { BsHeartFill } from 'react-icons/bs';
 import { FaHeart } from 'react-icons/fa';
 
 export const Footer2 = () => {
+  const [userEmail, setUserEmail] = useState('');
+
+  const handleSendEmail = () => {
+    // This will open the user's default email app with a predefined recipient and body text
+    window.location.href = `mailto:niloy0929@gmail.com?subject=Donation Query&body=Please share details. My email: ${userEmail}`;
+  };
   return (
     <div className='bg-green-200'>
       <div className='px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
@@ -22,7 +29,14 @@ export const Footer2 = () => {
           </div>
 
           <div className='col-span-2 lg:col-span-2 lg:flex lg:items-end'>
-            <form className='w-full'>
+            {/* this form submission will open email app and send email to niloy0929@gmail.com*/}
+            <form
+              className='w-full'
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleSendEmail();
+              }}
+            >
               <label htmlFor='UserEmail' className='sr-only'>
                 Email
               </label>
@@ -31,9 +45,15 @@ export const Footer2 = () => {
                   type='email'
                   id='UserEmail'
                   placeholder='youremail@mail.com'
+                  value={userEmail}
+                  onChange={(e) => setUserEmail(e.target.value)}
                   className='w-full border-none py-3 px-4 focus:border-transparent focus:ring-transparent sm:text-sm'
+                  required
                 />
-                <button className='mt-1 w-full bg-green-600 hover:bg-secondary px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none sm:mt-0 sm:w-auto sm:shrink-0'>
+                <button
+                  type='submit'
+                  className='mt-1 w-full bg-green-600 hover:bg-secondary px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none sm:mt-0 sm:w-auto sm:shrink-0'
+                >
                   Send
                 </button>
               </div>
