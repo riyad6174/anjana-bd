@@ -19,12 +19,9 @@ function Campaign({ campaigns }) {
         </div>
         <div className='py-4  text-center px-10 md:px-44 text-gray-500'>
           <p>
-            {' '}
-            <p>
-              We work towards eradicating poverty by empowering families with
-              sustainable solutions that improve their livelihoods and overall
-              well-being.
-            </p>
+            We work towards eradicating poverty by empowering families with
+            sustainable solutions that improve their livelihoods and overall
+            well-being.
           </p>
         </div>
 

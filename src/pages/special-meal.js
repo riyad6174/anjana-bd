@@ -39,90 +39,91 @@ const MyForm = () => {
       </div>
       <div className='container pb-20'>
         <div className='text-green-600 text-left uppercase font-bold text-xl'>
-          <p className=' block py-4'>Special Meal</p>
+          <p className='block py-4'>Special Meal</p>
         </div>
         <form>
-          <table className='min-w-full border '>
-            <thead>
-              <tr className='bg-green-600 text-white uppercase text-sm  '>
-                <th className='py-2 font-thin'>Date</th>
-                <th className='py-2 font-thin'>Branch</th>
-                <th className=' py-2 font-thin'>Menu Item</th>
-                <th className=' py-2 font-thin'>Quantity</th>
-                <th className='py-2 font-thin'>Subtotal</th>
-                <th className='py-2 font-thin'>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((row, index) => (
-                <tr key={index} className='text-center '>
-                  <td className='py-2'>
-                    <input
-                      type='date'
-                      value={row.date}
-                      onChange={(e) =>
-                        handleInputChange(index, 'date', e.target.value)
-                      }
-                      className='border p-2 text-sm'
-                    />
-                  </td>
-                  <td>
-                    <select
-                      value={row.branch}
-                      onChange={(e) =>
-                        handleInputChange(index, 'branch', e.target.value)
-                      }
-                      className='border p-2 text-sm '
-                    >
-                      {/* Add your branch options here */}
-                      <option>Dhaka Branch</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select
-                      value={row.menuItem}
-                      onChange={(e) =>
-                        handleInputChange(index, 'menuItem', e.target.value)
-                      }
-                      className='border p-2 text-sm'
-                    >
-                      {/* Add your menu item options here */}
-                      <option>Fish + Rice + egg</option>
-                    </select>
-                  </td>
-                  <td>
-                    <input
-                      type='number'
-                      value={row.quantity}
-                      onChange={(e) =>
-                        handleInputChange(index, 'quantity', e.target.value)
-                      }
-                      className='border p-2 text-sm'
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type='text'
-                      value={row.subtotal}
-                      onChange={(e) =>
-                        handleInputChange(index, 'subtotal', e.target.value)
-                      }
-                      className='border p-2 text-sm'
-                    />
-                  </td>
-                  <td>
-                    <button
-                      type='button'
-                      onClick={() => handleRemoveRow(index)}
-                      className='text-white p-2 rounded-full text-sm bg-red-500'
-                    >
-                      <MdClose className='text-lg' />
-                    </button>
-                  </td>
+          {/* Responsive table wrapper */}
+          <div className='overflow-x-auto'>
+            <table className='min-w-full border '>
+              <thead>
+                <tr className='bg-green-600 text-white uppercase text-sm'>
+                  <th className='py-2 font-thin'>Date</th>
+                  <th className='py-2 font-thin'>Branch</th>
+                  <th className='py-2 font-thin'>Menu Item</th>
+                  <th className='py-2 font-thin'>Quantity</th>
+                  <th className='py-2 font-thin'>Subtotal</th>
+                  <th className='py-2 font-thin'>Action</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {rows.map((row, index) => (
+                  <tr key={index} className='text-center'>
+                    <td className='py-2'>
+                      <input
+                        type='date'
+                        value={row.date}
+                        onChange={(e) =>
+                          handleInputChange(index, 'date', e.target.value)
+                        }
+                        className='border p-2 text-sm w-full'
+                      />
+                    </td>
+                    <td>
+                      <select
+                        value={row.branch}
+                        onChange={(e) =>
+                          handleInputChange(index, 'branch', e.target.value)
+                        }
+                        className='border p-2 text-sm w-full'
+                      >
+                        <option>Dhaka Branch</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select
+                        value={row.menuItem}
+                        onChange={(e) =>
+                          handleInputChange(index, 'menuItem', e.target.value)
+                        }
+                        className='border p-2 text-sm w-full'
+                      >
+                        <option>Fish + Rice + Egg</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        type='number'
+                        value={row.quantity}
+                        onChange={(e) =>
+                          handleInputChange(index, 'quantity', e.target.value)
+                        }
+                        className='border p-2 text-sm w-full'
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type='text'
+                        value={row.subtotal}
+                        onChange={(e) =>
+                          handleInputChange(index, 'subtotal', e.target.value)
+                        }
+                        className='border p-2 text-sm w-full'
+                      />
+                    </td>
+                    <td>
+                      <button
+                        type='button'
+                        onClick={() => handleRemoveRow(index)}
+                        className='text-white p-2 rounded-full text-sm bg-red-500'
+                      >
+                        <MdClose className='text-lg' />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           <div className='mt-4 text-center'>
             <button
@@ -135,7 +136,6 @@ const MyForm = () => {
           </div>
 
           <div className='mt-4'>
-            {/* Message field */}
             <textarea
               className='w-full p-2 border border-gray-300'
               placeholder='Your message here'
@@ -143,11 +143,14 @@ const MyForm = () => {
           </div>
         </form>
         <div>
-          <div class='mx-auto w-full max-w-[550px] pt-10'>
-            <div class='-mx-3 flex flex-wrap'>
-              <div class='w-full px-3 sm:w-1/2'>
-                <div class='mb-5'>
-                  <label for='fName' class='mb-3 block text-sm  text-[#07074D]'>
+          <div className='mx-auto w-full max-w-[550px] pt-10'>
+            <div className='-mx-3 flex flex-wrap'>
+              <div className='w-full px-3 sm:w-1/2'>
+                <div className='mb-5'>
+                  <label
+                    htmlFor='fName'
+                    className='mb-3 block text-sm text-[#07074D]'
+                  >
                     Total Quantity
                   </label>
                   <input
@@ -155,13 +158,16 @@ const MyForm = () => {
                     name='fName'
                     id='fName'
                     placeholder='Total Quantity'
-                    class='w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'
+                    className='w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'
                   />
                 </div>
               </div>
-              <div class='w-full px-3 sm:w-1/2'>
-                <div class='mb-5'>
-                  <label for='lName' class='mb-3 block text-sm  text-[#07074D]'>
+              <div className='w-full px-3 sm:w-1/2'>
+                <div className='mb-5'>
+                  <label
+                    htmlFor='lName'
+                    className='mb-3 block text-sm text-[#07074D]'
+                  >
                     Total Amount
                   </label>
                   <input
@@ -169,24 +175,24 @@ const MyForm = () => {
                     name='lName'
                     id='lName'
                     placeholder='Total Amount'
-                    class='w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'
+                    className='w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'
                   />
                 </div>
               </div>
             </div>
 
-            <div class='mb-5'>
-              <div class='flex items-center space-x-6'>
-                <div class='flex items-center'>
+            <div className='mb-5'>
+              <div className='flex items-center space-x-6'>
+                <div className='flex items-center'>
                   <input
                     type='checkbox'
                     name='radio1'
                     id='radioButton1'
-                    class='h-5 w-5'
+                    className='h-5 w-5'
                   />
                   <label
-                    for='radioButton1'
-                    class='pl-3 text-sm font-medium text-[#07074D]'
+                    htmlFor='radioButton1'
+                    className='pl-3 text-sm font-medium text-[#07074D]'
                   >
                     I WANT TO PROVIDE MY INFORMATION
                   </label>
@@ -195,7 +201,7 @@ const MyForm = () => {
             </div>
 
             <div className='text-center '>
-              <button class='text-center hover:shadow-form rounded-md bg-green-600 hover:bg-secondary py-3 px-8 text-base font-semibold text-white outline-none'>
+              <button className='text-center hover:shadow-form rounded-md bg-green-600 hover:bg-secondary py-3 px-8 text-base font-semibold text-white outline-none'>
                 Donate
               </button>
             </div>

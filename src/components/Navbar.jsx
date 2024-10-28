@@ -114,7 +114,12 @@ function Navbar() {
         </ul>
       </div>
       <div className='sm:hidden flex items-center'>
-        <button className='text-2xl text-green-600' onClick={toggleCollapse}>
+        <button
+          className={`text-2xl ${
+            scrollY > 20 ? 'text-white' : 'text-green-600'
+          }`}
+          onClick={toggleCollapse}
+        >
           {isCollapsed ? <MdClose /> : <MdMenu />}
         </button>
       </div>
@@ -130,30 +135,72 @@ function Navbar() {
           </div>
           <ul className='flex flex-col items-center text-xl'>
             <li>
-              <a href='#' className='text-green-600 py-4'>
-                Who we are
-              </a>
+              <Link
+                href='/special-meal'
+                className='text-green-600'
+                onClick={toggleCollapse}
+              >
+                Special Meal
+              </Link>
             </li>
             <li>
-              <a href='#' className='text-green-600 py-4'>
+              <Link
+                href='/campaigns'
+                className='text-green-600'
+                onClick={toggleCollapse}
+              >
                 Our Campaign
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='#' className='text-green-600 py-4'>
-                News
-              </a>
+              <Link
+                href='/projects'
+                className='text-green-600'
+                onClick={toggleCollapse}
+              >
+                See Projects
+              </Link>
             </li>
             <li>
-              <a href='#' className='text-green-600 py-4'>
-                Contact Us
-              </a>
+              <Link
+                href='/volunteer'
+                className='text-green-600'
+                onClick={toggleCollapse}
+              >
+                Join Us
+              </Link>
             </li>
+
+            {isLoggedIn ? (
+              <li>
+                <Link
+                  href='/dashboard'
+                  className='text-green-600'
+                  onClick={toggleCollapse}
+                >
+                  Dashboard
+                </Link>
+              </li>
+            ) : (
+              <li>
+                <Link
+                  href='/login'
+                  className='text-green-600'
+                  onClick={toggleCollapse}
+                >
+                  Login
+                </Link>
+              </li>
+            )}
             <li>
-              <button className='border border-green-300 text-green-600 text-xs font-bold py-2 px-3 md:py-3 md:px-4 rounded-md flex items-center'>
+              <Link
+                href='/contact-us'
+                className='text-xs font-bold py-2 px-3 md:py-3 md:px-4 lg:py-4 lg:px-5 rounded-md flex items-center border border-violet-300 text-violet-600'
+                onClick={toggleCollapse}
+              >
                 Donate Now
-                <FaHeart size={13} className='ml-2' />
-              </button>
+                <FaHeart size={16} className='ml-2' />
+              </Link>
             </li>
           </ul>
         </div>

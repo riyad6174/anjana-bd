@@ -19,12 +19,9 @@ function Projects({ projects }) {
         </div>
         <div className='py-4  text-center px-10 md:px-44 text-gray-500'>
           <p>
-            {' '}
-            <p>
-              Charity responds to natural disasters and humanitarian crises by
-              providing immediate relief supplies such as food, water, and
-              shelter to affected communities worldwide.
-            </p>
+            Charity responds to natural disasters and humanitarian crises by
+            providing immediate relief supplies such as food, water, and shelter
+            to affected communities worldwide.
           </p>
         </div>
         <div className='container px-0 md:px-10'>

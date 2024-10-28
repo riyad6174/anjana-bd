@@ -11,12 +11,9 @@ function JoinUs() {
       </span>
       <div className='py-4  text-center px-10 md:px-44 text-gray-500'>
         <p>
-          {' '}
-          <p>
-            Be part of our mission to make a positive impact. By joining us, you
-            contribute to improving lives, fostering growth, and bringing smiles
-            to those facing hardship.
-          </p>
+          Be part of our mission to make a positive impact. By joining us, you
+          contribute to improving lives, fostering growth, and bringing smiles
+          to those facing hardship.
         </p>
       </div>
       <section class='text-gray-700 body-font'>
